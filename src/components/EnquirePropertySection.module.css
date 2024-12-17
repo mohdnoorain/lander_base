@@ -1,0 +1,91 @@
+/* enquirePropertySection.module.css */
+
+/* Section Padding */
+.sectionContainer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+/* Container Width */
+.container {
+  margin: 0 auto;
+  width: 90%; /* Default container width */
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (min-width: 990px) {
+  .container {
+    width: 950px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+
+/* Heading Styles */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+.textCenter {
+   /* Horizontally center content (flex items) */
+  text-align: center; /* Vertically center content (flex items) */
+ 
+}
+/* Flex Wrapper */
+.flexWrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual Item Style */
+.enquireItem {
+  padding: 20px;
+  width: 100%;
+  font-size: 12px;
+  background-color: #0052b7;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (min-width: 640px) {
+  .enquireItem {
+    width: 45%;
+    padding: 20px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .enquireItem {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .enquireItem {
+    width: 35%;
+  }
+}

@@ -1,6 +1,9 @@
 "use client";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import SectionFirst from "@/components/SectionFirst";
+import FloatingActionButton from "@/components/FloatingActionButton";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function Home() {
 
@@ -23,7 +26,9 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <h2>Hii there</h2>
+      <SectionFirst></SectionFirst>
+      <FloatingActionButton/>
+      <ScrollToTopButton/>
     </div>
   );
 }

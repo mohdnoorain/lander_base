@@ -1,0 +1,25 @@
+/* ScrollToTopButton.module.css */
+
+.button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+  padding: 0.75rem;
+  background-color: #db6a37; /* Tailwind's bg-blue-500 */
+  color: white;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #1d4ed8; /* Tailwind's bg-blue-700 */
+  transform: translateY(-4px); /* Smooth hover effect */
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
