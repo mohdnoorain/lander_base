@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
             <div className={styles.contactContainer}>
               <span className={styles.contactDetails}>
                 <IoMdCall />
-                +97142500089
+                +971425000
               </span>
 
               <CgProfile
