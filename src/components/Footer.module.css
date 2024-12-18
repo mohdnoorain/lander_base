@@ -1,0 +1,185 @@
+/* General Footer Styles */
+.footer {
+  background-color: white;
+  color: #4a5568; /* Gray 700 */
+  padding: 2.5rem 1.25rem; /* 10px 5px */
+  font-family: sans-serif;
+}
+
+/* Layout Styles */
+.footerContainer {
+  max-width: 1120px; /* 7xl */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem; /* 10px */
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    flex-direction: row;
+  }
+}
+
+/* Logo Section */
+.logoSection {
+  text-align: center; /* Center-align by default */
+}
+
+.logo {
+  margin: 0 auto; /* Center the logo */
+  max-width: 150px;
+}
+
+@media (min-width: 768px) {
+  .logoSection {
+    text-align: center; /* Left-align on larger screens */
+  }
+
+  .logo {
+    margin: 0; /* Remove auto margin for larger screens */
+  }
+}
+
+
+.logo {
+  margin: 0 auto;
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.logoDescription {
+  font-size: 0.875rem; /* 14px */
+  color: #718096; /* Gray 600 */
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .logoDescription {
+    text-align: left;
+  }
+}
+
+/* Quick Links */
+.quickLinks {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .quickLinks {
+    width: 25%;
+    text-align: left;
+  }
+}
+
+.quickLinksTitle {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #dd6b20; /* Orange 500 */
+}
+
+.quickLinksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem; /* 2px */
+  color: #718096; /* Gray 600 */
+}
+
+/* Contact Section */
+.contactSection {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contactSection {
+    width: 25%;
+    text-align: left;
+  }
+}
+
+.contactTitle {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #dd6b20; /* Orange 500 */
+}
+
+.contactInfo {
+  font-size: 0.875rem; /* 14px */
+  color: #718096; /* Gray 600 */
+  margin-top: 1rem;
+}
+
+.contactInfo strong {
+  font-weight: 700;
+}
+
+.contactEmail {
+  color: #1d4ed8; /* Blue 700 */
+  text-decoration: none;
+}
+
+/* Social Media Links */
+.socialMedia {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .socialMedia {
+    width: 25%;
+    text-align: left;
+  }
+}
+
+.socialTitle {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #dd6b20; /* Orange 500 */
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem; /* 3px */
+  color: #718096; /* Gray 600 */
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .socialLinks {
+    justify-content: flex-start;
+  }
+}
+
+.socialIcon {
+  font-size: 1.25rem; /* lg */
+}
+
+@media (min-width: 640px) {
+  .socialIcon {
+    font-size: 1.5rem; /* xl */
+  }
+}
+
+@media (min-width: 768px) {
+  .socialIcon {
+    font-size: 2rem; /* 2xl */
+  }
+}
+
+/* Footer Bottom */
+.footerBottom {
+  border-top: 1px solid #e2e8f0; /* Gray 200 */
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem; /* 14px */
+  color: #a0aec0; /* Gray 500 */
+}

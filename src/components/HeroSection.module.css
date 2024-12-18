@@ -1,0 +1,134 @@
+.heroSection {
+  padding-top: 11rem; /* pt-44 */
+  padding-bottom: 6rem; /* pb-24 */
+  background-size: cover; /* bg-cover */
+  background-position: center; /* bg-center */
+  background-attachment: fixed; /* bg-fixed */
+  position: relative; /* relative */
+}
+
+.heroSectionOverlay {
+  position: absolute; /* absolute */
+  inset: 0; /* inset-0 */
+  background-color: black; /* bg-black */
+  opacity: 0.4; /* opacity-40 */
+  filter: blur(1px); /* blur-[1px] */
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem; /* Add padding for smaller screens */
+  width: 90%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.flexWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Use column layout on smaller screens */
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.flexWrapperLg {
+  @media (min-width: 768px) {
+    flex-direction: row; /* Switch to row layout on larger screens */
+    justify-content: center;
+    align-items: center; /* Align items to the top */
+    text-align: left;
+  }
+}
+
+.textContainer {
+  width: 100%; /* Full width on smaller screens */
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.textContainerLg {
+  @media (min-width: 768px) {
+    width: 60%; /* Adjust text container width for larger screens */
+    margin-bottom: 0;
+  }
+}
+
+.heading {
+  margin: 0;
+  font-weight: 700;
+  font-size: 26px; /* Default size for smaller screens */
+}
+
+.headingMd {
+  @media (min-width: 576px) {
+    font-size: 36px;
+    
+  }
+}
+
+.headingLg {
+  @media (min-width: 992px) {
+    font-size: 50px; /* Larger heading size for desktops */
+  }
+}
+
+.paragraph1,
+.paragraph2 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.paragraph1Md,
+.paragraph2Md {
+  @media (min-width: 576px) {
+    font-size: 16px;
+  }
+}
+
+.paragraph1Lg {
+  @media (min-width: 992px) {
+    font-size: 24px;
+  }
+}
+
+.paragraph2Lg {
+  @media (min-width: 992px) {
+    font-size: 18px;
+  }
+}
+
+.signupContainer {
+  width: 100%; /* Full width on smaller screens */
+  margin-top: 2rem; /* Add spacing between text and form */
+}
+
+.signupContainerLg {
+  @media (min-width: 768px) {
+    width: 40%; /* Form takes less space on larger screens */
+    margin-top: 0;
+  }
+}

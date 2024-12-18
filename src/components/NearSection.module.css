@@ -1,0 +1,292 @@
+/* Container and Section Styles */
+.sectionContainer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f7f7f7;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (min-width: 990px) {
+  .container {
+    width: 950px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+/* Flex and Layout */
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Left Section */
+.leftSection {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.leftSectionLg {
+  width: 50%;
+  margin-bottom: 0;
+}
+
+/* Item Styles */
+.nearByItem {
+  margin-bottom: 15px;
+}
+
+.itemWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* Time Box */
+.timeBox {
+  padding: 10px;
+  text-align: center;
+  background-color: #db6a37;
+  border-radius: 5px;
+}
+
+.timeBoxSm {
+  width: 15%;
+  padding: 15px;
+}
+
+.timeBoxMd {
+  width: 15%;
+  padding: 20px;
+}
+
+.timeBoxLg {
+  width: 25%;
+}
+
+/* Time Text */
+.timeText {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.timeTextSm {
+  font-size: 28px;
+}
+
+.timeTextMd {
+  font-size: 36px;
+}
+
+/* Minutes Text */
+.minutesText {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.minutesTextSm {
+  font-size: 14px;
+}
+
+.minutesTextMd {
+  font-size: 16px;
+}
+
+/* Location Box */
+.locationBox {
+  padding-left: 10px;
+}
+
+.locationBoxSm {
+  padding-left: 15px;
+}
+
+.locationBoxMd {
+  padding-left: 20px;
+}
+
+/* Location Text */
+.locationText {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.locationTextSm {
+  font-size: 22px;
+}
+
+.locationTextMd {
+  font-size: 24px;
+}
+
+/* Right Section */
+.rightSection {
+  width: 100%;
+}
+
+.rightSectionLg {
+  width: 50%;
+}
+
+/* Map Wrapper */
+/* Map Wrapper */
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* Aspect ratio (4:3) */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapWrapperSm {
+  padding-bottom: 50%; /* Aspect ratio change for small screens */
+}
+
+.mapWrapperLg {
+  padding-bottom: 40%; /* Aspect ratio change for larger screens */
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .mapWrapperLg {
+    padding-bottom: 50%; /* Adjust for medium screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .mapWrapperLg {
+    padding-bottom: 60%; /* Adjust height for larger screens */
+  }
+}
+
+@media (min-width: 1300px) {
+  .mapWrapperLg {
+    padding-bottom: 50%; /* Adjust height for very large screens */
+  }
+}
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .leftSectionLg {
+    width: 100%;
+  }
+
+  .rightSectionLg {
+    width: 100%;
+  }
+
+  .timeBoxLg {
+    width: 30%;
+  }
+
+  .timeText {
+    font-size: 20px;
+  }
+
+  .locationText {
+    font-size: 18px;
+  }
+
+ 
+}
+
+
+
+ /* Time Box Styles */
+/* Time Box Styles */
+.timeBox {
+  padding: 10px;
+  text-align: center;
+  background-color: #db6a37;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.timeBoxSm {
+  width: 15%;
+  padding: 15px;
+}
+
+.timeBoxMd {
+  width: 15%;
+  padding: 20px;
+}
+
+.timeBoxLg {
+  width: 25%;
+}
+
+/* Time Text */
+.timeText {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.timeTextSm {
+  font-size: 28px;
+}
+
+.timeTextMd {
+  font-size: 36px;
+}
+
+/* Minutes Text */
+.minutesText {
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 4px; /* Adds space between time and "minutes" */
+  color: white;
+}
+
+.minutesTextSm {
+  font-size: 14px;
+}
+
+.minutesTextMd {
+  font-size: 16px;
+}

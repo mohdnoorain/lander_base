@@ -1,0 +1,101 @@
+/* paymentPlans.module.css */
+
+/* Container and Background Styles */
+.sectionContainer {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.sectionContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  filter: blur(1px);
+}
+
+/* Container Width */
+.container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: white;
+}
+
+@media (min-width: 640px) {
+  .heading {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+.textcenter{
+    text-align: center;
+}
+/* List Styles */
+.paymentPlansList {
+  margin-top: 30px;
+}
+
+@media (min-width: 640px) {
+  .paymentPlansList {
+    margin-top: 50px;
+  }
+}
+
+/* List Item Styles */
+.paymentPlanItem {
+  padding: 20px;
+  width: 100%;
+  font-size: 12px;
+  background-color: #0052b7;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+@media (min-width: 640px) {
+  .paymentPlanItem {
+    width: 30%;
+    padding: 20px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .paymentPlanItem {
+    width: 30%;
+  }
+}
+
+/* Flex and Layout */
+.flexWrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 640px) {
+  .paymentPlanItem {
+    width: 100%; /* Full width on smaller screens */
+  }
+}

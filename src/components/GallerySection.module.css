@@ -1,0 +1,56 @@
+/* GallerySection.module.css */
+.gallerySection {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f7f7f7;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (min-width: 990px) {
+  .container {
+    width: 950px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+
+
+.sliderWrapper {
+  margin-top: 50px;
+}

@@ -1,0 +1,131 @@
+/* Overlay with fade animation */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+/* Modal with slide animation */
+.modal {
+  background-color: #fff;
+  width: 90%;
+  max-width: 400px; /* Default max-width for larger screens */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.slideUp {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slideDown {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* Responsive Modal Adjustments */
+@media (min-width: 768px) {
+  .modal {
+    max-width: 500px; /* Medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    max-width: 600px; /* Large screens */
+  }
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Container */
+.inputContainer {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.inputContainer input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit Button */
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #0660ba;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #555;
+}
+
+/* Small devices */
+@media (max-width: 480px) {
+  .modal {
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .inputContainer input {
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

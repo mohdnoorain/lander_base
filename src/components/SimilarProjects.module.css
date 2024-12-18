@@ -1,0 +1,110 @@
+/* Section Container Styles */
+.sectionContainer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (min-width: 990px) {
+  .container {
+    width: 950px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+/* Centered Text */
+.textCenter {
+  text-align: center;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+/* Project Grid */
+.projectsGrid {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individual Project Card */
+.projectCard {
+  width: 100%;
+  padding: 15px;
+}
+
+@media (min-width: 640px) {
+  .projectCard {
+    width: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .projectCard {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectCard {
+    width: 28%;
+  }
+}
+
+.cardInner {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Styles */
+.projectImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Project Title */
+.projectTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+/* Project Description */
+.projectDescription {
+  color: #808080;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}

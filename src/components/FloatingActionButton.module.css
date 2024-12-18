@@ -1,0 +1,77 @@
+/* FloatingActionButton.module.css */
+
+.fabContainer {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fabOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fabButton {
+  padding: 1rem;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  background-color: #1877f2;
+}
+
+.fabButton:hover {
+  opacity: 0.9; /* Slight hover effect for all buttons */
+ 
+}
+
+.fabIcon {
+  font-size: 1.5rem;
+}
+
+/* WhatsApp button styles */
+.fabOptions a.whatsapp {
+  background-color: #10b981; /* Green for WhatsApp */
+}
+
+.fabOptions a.whatsapp:hover {
+  background-color: #059669; /* Darker green */
+}
+
+/* Messenger button styles */
+.fabOptions a.messenger {
+  background-color: #1877f2; /* Blue for Messenger */
+}
+
+.fabOptions a.messenger:hover {
+  background-color: #1558a2; /* Darker blue */
+}
+
+.rotateButton {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fabHidden {
+  display: none;
+}
+
+.fabShow {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fabHide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
