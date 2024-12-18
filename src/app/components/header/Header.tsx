@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { IoMdCall } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import styles from "./NavBar.module.css";
-import LoginForm from "../app/components/logInForm/LoginForm";
+import styles from "./header.module.css";
+import LoginForm from "@/app/components/logInForm/LoginForm";
 
 const NavBar: React.FC = () => {
   const [isMediumMenuOpen, setMediumMenuOpen] = useState(false);
@@ -141,7 +141,7 @@ const NavBar: React.FC = () => {
         </div>
       )}
 
-      {showSignIn && <LoginForm/>}
+      {showSignIn && <LoginForm />}
     </nav>
   );
 };
