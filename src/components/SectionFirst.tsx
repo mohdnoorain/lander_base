@@ -1,7 +1,6 @@
 "use client";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import HeroSection from "./HeroSection";
 import FeatureSection from "./FeatureSection";
 import GallerySection from "./GallerySection";
 import Amenities from "./Amenities";
