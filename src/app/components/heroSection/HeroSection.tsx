@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./HeroSection.module.css";
-import SignUpForm from "./SignUpForm";
+import SignUpForm from "../signUpForm/SignUpForm";
 
 // import { SignupForm } from "./SignUpForm";
 
