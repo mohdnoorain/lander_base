@@ -15,29 +15,34 @@
   filter: blur(1px); /* blur-[1px] */
 }
 
-/* Container Width */
 .container {
-  margin: 0 auto;
-  width: 90%; /* Default container width */
+    margin: 0 auto;
 }
 
-@media (min-width: 1024px) {
-  /* lg:mx-8, lg:max-w-[calc(100%-4rem)] */
-  .container {
-    margin-left: 2rem; /* lg:mx-8 => 2rem */
-    margin-right: 2rem; /* lg:mx-8 => 2rem */
-    /* lg:max-w-[calc(100%-4rem)] */
-  }
+@media screen and (min-width: 200px) {
+    .container {
+        max-width: 90%;
+    }
 }
 
-@media (min-width: 1280px) {
-  /* xl:mx-16, xl:max-w-[calc(100%-8rem)] */
-  .container {
-    margin-left: 4rem; /* xl:mx-16 => 4rem */
-    margin-right: 4rem; /* xl:mx-16 => 4rem */
-  /* xl:max-w-[calc(100%-8rem)] */
-  }
+@media screen and (min-width: 767px) {
+    .container {
+        max-width: 730px;
+    }
 }
+
+@media screen and (min-width: 990px) {
+    .container {
+        max-width: 950px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
 
 
 

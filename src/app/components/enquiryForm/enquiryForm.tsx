@@ -69,7 +69,7 @@ const EnquiryForm: React.FC = () => {
 
   return (
     <div className={styles.formContainer}>
-      <h2 className={styles.heading}>Sign Up</h2>
+      <h2 className={styles.heading}>Registor Now</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

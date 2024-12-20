@@ -15,8 +15,14 @@ const Header: React.FC = () => {
   return (
     <nav className={styles.Header}>
       <div className={styles.HeaderContainer}>
-        <CgProfile className={styles.profileIcon} onClick={toggleSignIn} />
-
+        <img
+          src={`/user.svg`}
+          alt="User Icon"
+          width="28"
+          height="28"
+          className={styles.profileIcon}
+          onClick={toggleSignIn}
+        />
         <img
           src="http://unitedestates.com/wp-content/uploads/2022/12/Untitled-design-6-1.png"
           alt="Logo"
@@ -45,7 +51,11 @@ const Header: React.FC = () => {
                 +971425000
               </span>
 
-              <CgProfile
+              <img
+                src={`/user.svg`}
+                alt="User Icon"
+                width="28"
+                height="28"
                 className={styles.profileIcon1}
                 onClick={toggleSignIn}
               />
