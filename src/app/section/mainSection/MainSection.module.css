@@ -1,4 +1,4 @@
-.heroSection {
+.MainSection {
   padding-top: 11rem; /* pt-44 */
   padding-bottom: 6rem; /* pb-24 */
   background-size: cover; /* bg-cover */
@@ -7,7 +7,7 @@
   position: relative; /* relative */
 }
 
-.heroSectionOverlay {
+.MainSectionOverlay {
   position: absolute; /* absolute */
   inset: 0; /* inset-0 */
   background-color: black; /* bg-black */
@@ -15,36 +15,32 @@
   filter: blur(1px); /* blur-[1px] */
 }
 
+/* Container Width */
 .container {
   margin: 0 auto;
-  padding: 0 1rem; /* Add padding for smaller screens */
-  width: 90%;
+  width: 90%; /* Default container width */
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1024px) {
+  /* lg:mx-8, lg:max-w-[calc(100%-4rem)] */
   .container {
-    width: 100%;
-    max-width: 540px;
+    margin-left: 2rem; /* lg:mx-8 => 2rem */
+    margin-right: 2rem; /* lg:mx-8 => 2rem */
+    /* lg:max-w-[calc(100%-4rem)] */
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
+  /* xl:mx-16, xl:max-w-[calc(100%-8rem)] */
   .container {
-    max-width: 720px;
+    margin-left: 4rem; /* xl:mx-16 => 4rem */
+    margin-right: 4rem; /* xl:mx-16 => 4rem */
+  /* xl:max-w-[calc(100%-8rem)] */
   }
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
+
 
 .flexWrapper {
   position: relative;

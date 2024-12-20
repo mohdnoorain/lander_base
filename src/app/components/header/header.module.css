@@ -1,5 +1,5 @@
-/* NavBar.module.css */
-.navbar {
+/* Header.module.css */
+.Header {
   position: absolute; /* absolute */
   padding-bottom: 0.75rem; /* pb-3 => 0.75rem */
   left: 0; /* inset-x-0 => left-0 */
@@ -10,7 +10,7 @@
   box-shadow: inset 0px 145px 50px -41px rgb(255, 255, 255); /* shadow-[inset_0px_150px_50px_-90px_rgba(255,255,255,1)] */
 }
 
-.navbarContainer {
+.HeaderContainer {
   display: flex; /* flex */
   justify-content: space-between; /* justify-between */
   align-items: center; /* items-center */
@@ -22,20 +22,18 @@
 }
 
 @media (min-width: 1024px) {
-  /* lg:mx-8, lg:max-w-[calc(100%-4rem)] */
-  .navbarContainer {
+  .HeaderContainer {
     margin-left: 2rem; /* lg:mx-8 => 2rem */
     margin-right: 2rem; /* lg:mx-8 => 2rem */
-    max-width: calc(100% - 4rem); /* lg:max-w-[calc(100%-4rem)] */
+    /* lg:max-w-[calc(100%-4rem)] */
   }
 }
 
 @media (min-width: 1280px) {
-  /* xl:mx-16, xl:max-w-[calc(100%-8rem)] */
-  .navbarContainer {
+  .HeaderContainer {
     margin-left: 4rem; /* xl:mx-16 => 4rem */
     margin-right: 4rem; /* xl:mx-16 => 4rem */
-    max-width: calc(100% - 8rem); /* xl:max-w-[calc(100%-8rem)] */
+ 
   }
 }
 

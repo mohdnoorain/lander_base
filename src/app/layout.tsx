@@ -25,10 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet"
-      ></link>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

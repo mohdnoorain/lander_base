@@ -4,9 +4,8 @@ import Link from "next/link";
 import { IoMdCall } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import styles from "./header.module.css";
-import LoginForm from "@/app/components/logInForm/LoginForm";
 
-const NavBar: React.FC = () => {
+const Header: React.FC = () => {
   const [isMediumMenuOpen, setMediumMenuOpen] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
 
@@ -14,8 +13,8 @@ const NavBar: React.FC = () => {
   const toggleSignIn = () => setShowSignIn(!showSignIn);
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navbarContainer}>
+    <nav className={styles.Header}>
+      <div className={styles.HeaderContainer}>
         <CgProfile className={styles.profileIcon} onClick={toggleSignIn} />
 
         <img
@@ -141,9 +140,9 @@ const NavBar: React.FC = () => {
         </div>
       )}
 
-      {showSignIn && <LoginForm />}
+      {/* {showSignIn && <LoginForm />} */}
     </nav>
   );
 };
 
-export default NavBar;
+export default Header;

@@ -1,7 +1,7 @@
 "use client";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import FeatureSection from "./FeatureSection";
+import FeatureSection from "../app/components/FeatureSection/FeatureSection";
 import GallerySection from "./GallerySection";
 import Amenities from "./Amenities";
 import NearSection from "./NearSection";

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import styles from "./page.module.css";
-import MainSection from "./section/MainSection";
+import MainSection from "./section/mainSection/MainSection";
 
 export default function Home() {
   const Gallery = async () => {
