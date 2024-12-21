@@ -1,4 +1,4 @@
-.heroSection {
+.MainSection {
   padding-top: 11rem; /* pt-44 */
   padding-bottom: 6rem; /* pb-24 */
   background-size: cover; /* bg-cover */
@@ -7,7 +7,7 @@
   position: relative; /* relative */
 }
 
-.heroSectionOverlay {
+.MainSectionOverlay {
   position: absolute; /* absolute */
   inset: 0; /* inset-0 */
   background-color: black; /* bg-black */
@@ -16,35 +16,36 @@
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 1rem; /* Add padding for smaller screens */
-  width: 90%;
+    margin: 0 auto;
 }
 
-@media (min-width: 576px) {
-  .container {
-    width: 100%;
-    max-width: 540px;
-  }
+@media screen and (min-width: 200px) {
+    .container {
+        max-width: 90%;
+    }
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
+@media screen and (min-width: 767px) {
+    .container {
+        max-width: 730px;
+    }
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
+@media screen and (min-width: 990px) {
+    .container {
+        max-width: 950px;
+    }
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
+@media screen and (min-width: 1300px) {
+    .container {
+        max-width: 1280px;
+    }
 }
+
+
+
+
 
 .flexWrapper {
   position: relative;
@@ -56,7 +57,7 @@
 }
 
 .flexWrapperLg {
-  @media (min-width: 768px) {
+  @media(min-width: 768px) {
     flex-direction: row; /* Switch to row layout on larger screens */
     justify-content: center;
     align-items: center; /* Align items to the top */
@@ -98,8 +99,9 @@
 
 .paragraph1,
 .paragraph2 {
+  margin-top: 16px ;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .paragraph1Md,
