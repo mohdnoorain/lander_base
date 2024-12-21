@@ -18,11 +18,16 @@ const EnquiryForm: React.FC = () => {
   });
 
   const [countries, setCountries] = useState<string[]>([]);
-  const [errors, setErrors] = useState<{ country: boolean }>({
+  const [errors, setErrors] = useState<{
+    fullName: boolean;
+    phoneNumber: boolean;
+    country: boolean;
+  }>({
+    fullName: false,
+    phoneNumber: false,
     country: false,
   });
 
-  // Fetch country names
   useEffect(() => {
     const fetchCountries = async () => {
       try {
@@ -50,6 +55,14 @@ const EnquiryForm: React.FC = () => {
       [name]: value,
     }));
 
+    if (name === "fullName" && value) {
+      setErrors((prev) => ({ ...prev, fullName: false }));
+    }
+
+    if (name === "phoneNumber" && value) {
+      setErrors((prev) => ({ ...prev, phoneNumber: false }));
+    }
+
     if (name === "country" && value) {
       setErrors((prev) => ({ ...prev, country: false }));
     }
@@ -58,27 +71,46 @@ const EnquiryForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validate country selection
-    if (!formData.country) {
-      setErrors((prev) => ({ ...prev, country: true }));
-      return;
+    const { fullName, phoneNumber, country } = formData;
+    let hasError = false;
+
+    if (!fullName.trim()) {
+      setErrors((prev) => ({ ...prev, fullName: true }));
+      hasError = true;
     }
+
+    if (!phoneNumber.trim()) {
+      setErrors((prev) => ({ ...prev, phoneNumber: true }));
+      hasError = true;
+    }
+
+    if (!country) {
+      setErrors((prev) => ({ ...prev, country: true }));
+      hasError = true;
+    }
+
+    if (hasError) return;
 
     console.log("Form Submitted", formData);
   };
 
   return (
     <div className={styles.formContainer}>
-      <h2 className={styles.heading}>Registor Now</h2>
+      <h2 className={styles.heading}>Register Now</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="fullName"
           placeholder="Full Name"
-          className={styles.inputField}
+          className={`${styles.inputField} ${
+            errors.fullName ? styles.error : ""
+          }`}
           value={formData.fullName}
           onChange={handleChange}
         />
+        {errors.fullName && (
+          <p className={styles.errorText}>Full Name is required.</p>
+        )}
         <input
           type="email"
           name="email"
@@ -91,10 +123,15 @@ const EnquiryForm: React.FC = () => {
           type="text"
           name="phoneNumber"
           placeholder="Phone"
-          className={styles.inputField}
+          className={`${styles.inputField} ${
+            errors.phoneNumber ? styles.error : ""
+          }`}
           value={formData.phoneNumber}
           onChange={handleChange}
         />
+        {errors.phoneNumber && (
+          <p className={styles.errorText}>Phone number is required.</p>
+        )}
         <select
           name="country"
           className={`${styles.dropdown} ${errors.country ? styles.error : ""}`}

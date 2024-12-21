@@ -11,7 +11,6 @@ export default function Home() {
         throw new Error("Failed to fetch feature data");
       }
       const data = await response.json();
-      console.log(data);
     } catch (error) {
       console.error("Error fetching feature data:", error);
     }

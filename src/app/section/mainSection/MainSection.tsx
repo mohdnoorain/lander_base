@@ -5,7 +5,6 @@ import SignUpForm from "@/app/components/enquiryForm/enquiryForm";
 import Header from "@/app/components/header/Header";
 import EnquiryForm from "@/app/components/enquiryForm/enquiryForm";
 
-
 interface MainSectionType {
   imgUrl: string;
   AddressTitle: string;
@@ -27,11 +26,9 @@ const MainSection: React.FC = () => {
         if (!response.ok) {
           throw new Error("Failed to fetch hero section data");
         }
-       
-        
+
         const data: MainSectionType = await response.json();
         setMainSectionData(data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching hero section data:", error);
       }
@@ -45,7 +42,6 @@ const MainSection: React.FC = () => {
       {/* Header */}
 
       <Header />
-
 
       <div
         className={styles.MainSection}

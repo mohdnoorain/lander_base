@@ -48,7 +48,7 @@ const Header: React.FC = () => {
             <div className={styles.contactContainer}>
               <span className={styles.contactDetails}>
                 <IoMdCall />
-                +971425000
+                +97142500000
               </span>
 
               <img
