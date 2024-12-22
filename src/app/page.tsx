@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import styles from "./page.module.css";
 import MainSection from "./section/mainSection/MainSection";
+import FeatureSection from "./section/FeatureSection/FeatureSection";
 
 export default function Home() {
   const Gallery = async () => {
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <MainSection />
+      <FeatureSection/>
     </div>
   );
 }

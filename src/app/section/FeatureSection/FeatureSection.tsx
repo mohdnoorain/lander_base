@@ -26,24 +26,40 @@ function FeatureSection() {
   }, []);
 
   return (
-    <div className={styles.featuresSection}>
-      <div className={styles.container}>
-        <div className={styles.textCenter}>
-          <h2 className={styles.heading}>Features</h2>
-        </div>
-        <div className={styles.featuresGrid}>
-          {Feature?.map(([img, price, locat], index) => (
-            <div className={styles.featureCard} key={index}>
-              <div className={styles.cardContent}>
-                <img src={img} alt="Feature" className={styles.image} />
-                <h3 className={styles.title}>{price}</h3>
-                <p className={styles.description}>{locat}</p>
-              </div>
-            </div>
-          ))}
+    <>
+      <div className={styles.infoSection}>
+        <div className={styles.infoContainer}>
+          <div className={styles.infoContents}>
+            <p className={styles.infoLines}>
+              The Dawn of A New Era. A magnum-opus unto itself – Binghatti
+              corner is born from a sheer sense of symmetry and refinement,
+              formed by sleek contours and illustrious iconicity. The design of
+              the dual massed hyper-tower depicts an unmatched architectural
+              prowess and ingenuity that are integral to Binghatti’s rooted
+              design philosophy. Meet us virtually today.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+      <div className={styles.featuresSection}>
+        <div className={styles.container}>
+          <div className={styles.textCenter}>
+            <h2 className={styles.heading}>Features</h2>
+          </div>
+          <div className={styles.featuresGrid}>
+            {Feature?.map(([img, price, locat], index) => (
+              <div className={styles.featureCard} key={index}>
+                <div className={styles.cardContent}>
+                  <img src={img} alt="Feature" className={styles.image} />
+                  <h3 className={styles.title}>{price}</h3>
+                  <p className={styles.description}>{locat}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -1,3 +1,54 @@
+/* info Section Styles */
+
+.infoSection {
+  background-color: #f7f7f7;
+  color: #808080;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.infoContainer {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 200px) {
+  .infoContainer {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .infoContainer {
+    max-width: 730px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .infoContainer {
+    max-width: 950px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .infoContainer {
+    max-width: 1280px;
+  }
+}
+
+.infoContents {
+  text-align: center;
+}
+
+.infoLines {
+  font-size: 20px;
+  line-height: 28px;
+}
+@media (max-width: 767px) {
+  .infoLines {
+    font-size: 16px;
+  }
+}
+
 /* Feature Section Styles */
 
 .featuresSection {
@@ -10,27 +61,27 @@
   margin: 0 auto;
 }
 
-@media (min-width: 200px) {
+@media screen and (min-width: 200px) {
   .container {
-    width: 90%;
+    max-width: 90%;
   }
 }
 
-@media (min-width: 767px) {
+@media screen and (min-width: 767px) {
   .container {
-    width: 730px;
+    max-width: 730px;
   }
 }
 
-@media (min-width: 990px) {
+@media screen and (min-width: 990px) {
   .container {
-    width: 950px;
+    max-width: 950px;
   }
 }
 
-@media (min-width: 1300px) {
+@media screen and (min-width: 1300px) {
   .container {
-    width: 1280px;
+    max-width: 1280px;
   }
 }
 
@@ -73,6 +124,12 @@
   .featureCard {
     width: 33.333%;
   }
+  .title {
+    font-size: 17px;
+  }
+  .description {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -109,7 +166,8 @@
 }
 
 .title {
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 500;
   margin-top: 20px;
   margin-bottom: 5px;
   margin-left: 0;
@@ -117,6 +175,6 @@
 }
 
 .description {
-  font-size: 14px;
+  font-size: 16px;
   color: #808080;
 }

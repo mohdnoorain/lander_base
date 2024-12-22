@@ -29,10 +29,16 @@ export function GET(
             "Location",
         ],
         [
+            "https://unitedestates.com/wp-content/uploads/2022/08/placeholder.png",
+            "JUMEIRAH VILLAGE CIRCLE, DUBAI",
+            "Location"
+        ],
+        [
             "https://unitedestates.com/wp-content/uploads/2022/08/hook.png",
             "Binghatti Developers",
             "Developer",
-        ],
+        ]
+
     ];
     return Response.json(Feature);
 }
