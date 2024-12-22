@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { IoMdCall } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import styles from "./NavBar.module.css";
-import LoginForm from "../app/components/logInForm/LoginForm";
+import styles from "./header.module.css";
 
-const NavBar: React.FC = () => {
+const Header: React.FC = () => {
   const [isMediumMenuOpen, setMediumMenuOpen] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
 
@@ -14,10 +13,16 @@ const NavBar: React.FC = () => {
   const toggleSignIn = () => setShowSignIn(!showSignIn);
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navbarContainer}>
-        <CgProfile className={styles.profileIcon} onClick={toggleSignIn} />
-
+    <nav className={styles.Header}>
+      <div className={styles.HeaderContainer}>
+        <img
+          src={`/user.svg`}
+          alt="User Icon"
+          width="28"
+          height="28"
+          className={styles.profileIcon}
+          onClick={toggleSignIn}
+        />
         <img
           src="http://unitedestates.com/wp-content/uploads/2022/12/Untitled-design-6-1.png"
           alt="Logo"
@@ -43,10 +48,14 @@ const NavBar: React.FC = () => {
             <div className={styles.contactContainer}>
               <span className={styles.contactDetails}>
                 <IoMdCall />
-                +971425000
+                +97142500000
               </span>
 
-              <CgProfile
+              <img
+                src={`/user.svg`}
+                alt="User Icon"
+                width="28"
+                height="28"
                 className={styles.profileIcon1}
                 onClick={toggleSignIn}
               />
@@ -141,9 +150,9 @@ const NavBar: React.FC = () => {
         </div>
       )}
 
-      {showSignIn && <LoginForm/>}
+      {/* {showSignIn && <LoginForm />} */}
     </nav>
   );
 };
 
-export default NavBar;
+export default Header;
