@@ -1,10 +1,10 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Slider.module.css";
 
 type GalleryType = string[];
 
-const Slider = () => {
+const Slider: React.FC = () => {
   const [images, setImages] = useState<GalleryType>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
@@ -121,7 +121,7 @@ const Slider = () => {
             ))}
           </div>
         </div>
-       
+
         <div className={styles.dotContainer}>
           {images.map((_, index) => (
             <button
