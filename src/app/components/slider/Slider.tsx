@@ -57,10 +57,10 @@ const Slider: React.FC = () => {
     const threshold = 50; // Minimum distance for a valid swipe
 
     if (deltaX > threshold) {
-      // Swiped left
+     
       goToNext();
     } else if (deltaX < -threshold) {
-      // Swiped right
+      
       goToPrevious();
     }
 
