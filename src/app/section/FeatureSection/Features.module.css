@@ -61,11 +61,7 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 200px) {
-  .container {
-    max-width: 90%;
-  }
-}
+
 
 @media screen and (min-width: 767px) {
   .container {

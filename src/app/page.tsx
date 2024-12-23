@@ -1,22 +1,21 @@
 "use client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./page.module.css";
 import MainSection from "./section/mainSection/MainSection";
 import FeatureSection from "./section/FeatureSection/FeatureSection";
 
-export default function Home() {
-  const Gallery = async () => {
-    try {
-      const response = await fetch("/api/AmenitiesData");
-      if (!response.ok) {
-        throw new Error("Failed to fetch feature data");
-      }
-      const data = await response.json();
-    } catch (error) {
-      console.error("Error fetching feature data:", error);
+const Gallery = async () => {
+  try {
+    const response = await fetch("/api/AmenitiesData");
+    if (!response.ok) {
+      throw new Error("Failed to fetch feature data");
     }
-  };
-
+    const data = await response.json();
+  } catch (error) {
+    console.error("Error fetching feature data:", error);
+  }
+};
+const DefaultPage: React.FC = () => {
   useEffect(() => {
     Gallery();
   }, []);
@@ -24,7 +23,9 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <MainSection />
-      <FeatureSection/>
+      <FeatureSection />
     </div>
   );
-}
+};
+
+export default DefaultPage;

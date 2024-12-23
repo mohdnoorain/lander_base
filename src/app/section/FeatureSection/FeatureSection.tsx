@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import styles from "./Features.module.css";
+import FeatureSectionCard from "@/app/components/featureSectionCard/FeatureSectionCard"; // Adjust the import path based on your file structure
 
-type FeatureType = [string, string, string][];
+type FeatureType = [string, string, string][]; // [image, price, location]
 
 function FeatureSection() {
-  const [Feature, setFeatures] = useState<FeatureType | null>(null);
+  const [features, setFeatures] = useState<FeatureType | null>(null);
 
   useEffect(() => {
     const fetchFeatures = async () => {
@@ -47,14 +48,13 @@ function FeatureSection() {
             <h2 className={styles.heading}>Features</h2>
           </div>
           <div className={styles.featuresGrid}>
-            {Feature?.map(([img, price, locat], index) => (
-              <div className={styles.featureCard} key={index}>
-                <div className={styles.cardContent}>
-                  <img src={img} alt="Feature" className={styles.image} />
-                  <h3 className={styles.title}>{price}</h3>
-                  <p className={styles.description}>{locat}</p>
-                </div>
-              </div>
+            {features?.map(([img, price, locat], index) => (
+              <FeatureSectionCard
+                key={index}
+                title={price}
+                description={locat}
+                image={img}
+              />
             ))}
           </div>
         </div>
