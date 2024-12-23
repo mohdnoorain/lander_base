@@ -13,13 +13,14 @@ const FeatureSectionCard: React.FC<FeatureSectionCardProps> = ({
   image,
 }) => {
   return (
-    <div className={styles.featureCard}>
-      <div className={styles.cardContent}>
+    <div className={styles.bestBox}>
+      <div className={styles.bestBoxInner}>
         <img src={image} alt={title} className={styles.image} />
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
       </div>
     </div>
+   
   );
 };
 
