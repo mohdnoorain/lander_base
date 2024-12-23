@@ -56,34 +56,6 @@
   }
 }
 
-/* Navigation Buttons */
-.navButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  border: none;
-  padding: 12px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  z-index: 10;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.navButton:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: scale(1.1);
-}
-
-.navButtonLeft {
-  left: 15px;
-}
-
-.navButtonRight {
-  right: 15px;
-}
-
 /* Dot Navigation */
 .dotContainer {
   position: absolute;
