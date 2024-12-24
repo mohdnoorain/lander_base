@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import styles from "./page.module.css";
 import MainSection from "./section/mainSection/MainSection";
 import FeatureSection from "./section/FeatureSection/FeatureSection";
+import GallerySection from "./section/GallerySection/GallerySection";
 
 const Gallery = async () => {
   try {
@@ -24,6 +25,7 @@ const DefaultPage: React.FC = () => {
     <div className={styles.page}>
       <MainSection />
       <FeatureSection />
+      <GallerySection/>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
-import Slider from "./Slider";
+import Slider from "../../components/slider/Slider";
 import styles from "./GallerySection.module.css";
 
-export default function GallerySection() {
+const  GallerySection:React.FC = ()=> {
   return (
     <div className={styles.gallerySection}>
       <div className={styles.container}>
@@ -18,3 +18,5 @@ export default function GallerySection() {
     </div>
   );
 }
+
+export default GallerySection ;

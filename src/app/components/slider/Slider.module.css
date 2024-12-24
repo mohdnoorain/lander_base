@@ -55,12 +55,9 @@
     height: 500px; /* Large screen */
   }
 }
-
-/* Navigation Buttons */
 .navButton {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; /* Align to the center vertically */
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   border: none;
@@ -70,18 +67,23 @@
   z-index: 10;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+@media (max-width: 1024px) {
+  .navButton {
+    display: none;
+  }
+}
+
+.navButtonLeft {
+  left: 15px; /* Fixed position from the left */
+}
+
+.navButtonRight {
+  right: 15px; /* Fixed position from the right */
+}
 
 .navButton:hover {
   background-color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
-}
-
-.navButtonLeft {
-  left: 15px;
-}
-
-.navButtonRight {
-  right: 15px;
 }
 
 /* Dot Navigation */
@@ -95,6 +97,7 @@
 }
 
 .dot {
+  border: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
