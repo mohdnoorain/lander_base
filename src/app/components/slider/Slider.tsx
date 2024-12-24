@@ -12,20 +12,21 @@ const Slider: React.FC = () => {
   const touchEndX = useRef<number | null>(null);
   const autoSlideInterval = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const fetchGallery = async () => {
-      try {
-        const response = await fetch("/api/GallerSectionData");
-        if (!response.ok) {
-          throw new Error("Failed to fetch gallery data");
-        }
-        const data: GalleryType = await response.json();
-        setImages(data);
-      } catch (error) {
-        console.error("Error fetching gallery data:", error);
+  const fetchSlideImages = async () => {
+    try {
+      const response = await fetch("/api/GallerSectionData");
+      if (!response.ok) {
+        throw new Error("Failed to fetch gallery data");
       }
-    };
-    fetchGallery();
+      const data: GalleryType = await response.json();
+      setImages(data);
+    } catch (error) {
+      console.error("Error fetching gallery data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchSlideImages();
   }, []);
 
   const goToNext = () => {
@@ -57,10 +58,8 @@ const Slider: React.FC = () => {
     const threshold = 50; // Minimum distance for a valid swipe
 
     if (deltaX > threshold) {
-     
       goToNext();
     } else if (deltaX < -threshold) {
-      
       goToPrevious();
     }
 
@@ -121,7 +120,19 @@ const Slider: React.FC = () => {
             ))}
           </div>
         </div>
+        <button
+          onClick={goToPrevious}
+          className={`${styles.navButton} ${styles.navButtonLeft}`}
+        >
+          &lt;
+        </button>
 
+        <button
+          onClick={goToNext}
+          className={`${styles.navButton} ${styles.navButtonRight}`}
+        >
+          &gt;
+        </button>
         <div className={styles.dotContainer}>
           {images.map((_, index) => (
             <button

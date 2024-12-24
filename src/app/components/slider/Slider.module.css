@@ -55,6 +55,36 @@
     height: 500px; /* Large screen */
   }
 }
+.navButton {
+  position: absolute;
+  top: 50%; /* Align to the center vertically */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  border: none;
+  padding: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .navButton {
+    display: none;
+  }
+}
+
+.navButtonLeft {
+  left: 15px; /* Fixed position from the left */
+}
+
+.navButtonRight {
+  right: 15px; /* Fixed position from the right */
+}
+
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
 
 /* Dot Navigation */
 .dotContainer {
