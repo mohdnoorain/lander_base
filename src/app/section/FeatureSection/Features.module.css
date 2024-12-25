@@ -5,6 +5,7 @@
   color: #808080;
   padding-top: 70px;
   padding-bottom: 70px;
+   
 }
 
 .infoContainer {
@@ -52,6 +53,7 @@
 /* Feature Section Styles */
 
 .featuresSection {
+  box-sizing: border-box;
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: white;

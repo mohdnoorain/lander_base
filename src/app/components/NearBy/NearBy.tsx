@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./NearSection.module.css";
+import styles from "./NearBy.module.css";
 
 type NearbyItem = [string, string];
 type ApiResponse = {
@@ -7,7 +7,7 @@ type ApiResponse = {
   LocationUrl: string;
 };
 
-export default function NearSection() {
+const NearBy: React.FC = () => {
   const [nearBy, setNearBy] = useState<NearbyItem[]>([]);
   const [locationUrl, setLocationUrl] = useState<string>("");
 
@@ -38,46 +38,29 @@ export default function NearSection() {
           </h2>
         </div>
         <div className={styles.flexWrap}>
-          <div className={`${styles.leftSection} ${styles.leftSectionLg}`}>
+          <div className={styles.leftSection}>
             {nearBy.map(([time, location], index) => (
               <div key={index} className={styles.nearByItem}>
                 <div className={styles.itemWrapper}>
-                  <div
-                    className={`${styles.timeBox} ${styles.timeBoxLg} ${styles.timeBoxMd}`}
-                  >
-                    <p
-                      className={`${styles.timeText} ${styles.timeTextMd} ${styles.timeTextSm}`}
-                    >
-                      {time}
-                    </p>
-                    <span
-                      className={`${styles.minutesText} ${styles.minutesTextMd}`}
-                    >
-                      minutes
-                    </span>
+                  <div className={styles.timeBox}>
+                    <p className={styles.timeText}>{time}</p>
+                    <span className={styles.minutesText}>minutes</span>
                   </div>
 
-                  <div
-                    className={`${styles.locationBox} ${styles.locationBoxMd}`}
-                  >
-                    <p
-                      className={`${styles.locationText} ${styles.locationTextMd}`}
-                    >
-                      {location}
-                    </p>
-                  </div>
+                  <p className={styles.locationBox}>{location}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className={`${styles.rightSection} ${styles.rightSectionLg}`}>
-            <div className={`${styles.mapWrapper} ${styles.mapWrapperLg}`}>
+          <div className={styles.rightSection}>
+            <div>
               <iframe
                 src={locationUrl}
                 width="100%"
-                height="500"
+              
                 allowFullScreen
+                className={styles.mapWrapper}
                 loading="lazy"
               ></iframe>
             </div>
@@ -86,4 +69,6 @@ export default function NearSection() {
       </div>
     </div>
   );
-}
+};
+
+export default NearBy;

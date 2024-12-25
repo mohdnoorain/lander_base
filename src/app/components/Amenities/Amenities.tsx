@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./Amenities.module.css";
+import { IoMdCheckmark } from "react-icons/io";
+
 
 type AmenitiesType = string[];
 
@@ -33,8 +35,8 @@ export default function Amenities() {
           <ul className={styles.flexWrapper}>
             {Amenities.map((item) => (
               <li className={styles.amenityItem} key={item}>
-                <span className={`${styles.icon} material-icons`}>done</span>
-                <span>{item}</span>
+                <IoMdCheckmark className={styles.icon} />
+                <span className={styles.span}>{item}</span>
               </li>
             ))}
           </ul>
