@@ -33,9 +33,7 @@ const NearBy: React.FC = () => {
     <div className={styles.sectionContainer}>
       <div className={styles.container}>
         <div className={styles.textCenter}>
-          <h2 className={`${styles.heading} ${styles.headingMd}`}>
-            What's Nearby
-          </h2>
+          <h2 className={styles.heading}>What's Nearby</h2>
         </div>
         <div className={styles.flexWrap}>
           <div className={styles.leftSection}>
@@ -56,9 +54,8 @@ const NearBy: React.FC = () => {
           <div className={styles.rightSection}>
             <div>
               <iframe
-                src={locationUrl}
+                src={locationUrl || "about:blank"}
                 width="100%"
-              
                 allowFullScreen
                 className={styles.mapWrapper}
                 loading="lazy"

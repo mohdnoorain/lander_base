@@ -9,12 +9,7 @@
 
 .container {
   margin: 0 auto;
-}
-
-@media (min-width: 200px) {
-  .container {
-    width: 90%;
-  }
+  width: 90%; 
 }
 
 @media (min-width: 767px) {
