@@ -68,7 +68,7 @@
 .amenityItem {
   list-style-type: none;
   width: 50%; /* Default width for small screens */
-  padding: 10px;
+  padding: 18px 0 ;
   font-size: 14px;
   color: #808080;
   display: flex;
@@ -96,7 +96,7 @@
 
 /* Icon Styles */
 .icon {
-    font-size: 100px;
+    font-size: 16px;
   color: #4caf50; /* Green color for icon */
   margin-right: 8px;
   
@@ -106,4 +106,8 @@
   .icon {
     width: 20px; /* Larger icon size for medium screens */
   }
+}
+
+.span{
+  font-size: 15px;
 }

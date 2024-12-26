@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import MainSection from "./section/mainSection/MainSection";
 import FeatureSection from "./section/FeatureSection/FeatureSection";
 import GallerySection from "./section/GallerySection/GallerySection";
+import NearBySection from "./section/NearBySection/NearBySection";
 
 const Gallery = async () => {
   try {
@@ -26,6 +27,7 @@ const DefaultPage: React.FC = () => {
       <MainSection />
       <FeatureSection />
       <GallerySection/>
+      <NearBySection/>
     </div>
   );
 };

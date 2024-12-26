@@ -3,8 +3,8 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import FeatureSection from "../app/components/FeatureSection/FeatureSection";
 import GallerySection from "../app/section/GallerySection/GallerySection";
-import Amenities from "./Amenities";
-import NearSection from "./NearSection";
+import Amenities from "../app/components/Amenities/Amenities";
+import NearSection from "../app/components/NearBy/NearBy";
 import PaymentSection from "./PaymentSection";
 import EnquirePropertySection from "./EnquirePropertySection";
 import SimiliarProjectSection from "./SimiliarProjectSection";
@@ -13,7 +13,7 @@ function SectionFirst() {
   return (
     <>
       <NavBar />
-      <HeroSection />
+      {/* <HeroSection /> */}
       {/* features */}
       <FeatureSection />
       {/* gallery Section  */}

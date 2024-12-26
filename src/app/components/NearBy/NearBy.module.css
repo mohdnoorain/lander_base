@@ -1,0 +1,189 @@
+/* Container and Section Styles */
+
+.sectionContainer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f7f7f7;
+ 
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%; 
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (min-width: 990px) {
+  .container {
+    width: 950px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+/* Flex and Layout */
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Left Section */
+.leftSection {
+  width: 50%;
+}
+
+@media (max-width: 990px) {
+  .leftSection {
+    width: 100%;
+  }
+}
+
+/* Item Styles */
+.nearByItem {
+  margin-bottom: 15px;
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Time Box */
+.timeBox {
+  width: 16%;
+  padding: 20px 20px;
+  text-align: center;
+  background-color: #db6a37;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .timeBox {
+    width: 27%;
+  }
+}
+@media (max-width: 1200px) {
+  .timeBox {
+    width: 20%;
+  }
+}
+
+/* Time Text */
+
+.timeText {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .timeText {
+    font-size: 28px;
+  }
+}
+
+/* Minutes Text */
+.minutesText {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .minutesText {
+    font-size: 16px;
+  }
+}
+/* Location Box */
+
+.locationBox {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+@media screen and (max-width: 1200px) {
+  .locationBox {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .locationBox {
+    font-size: 18px;
+  }
+}
+
+/* Right Section */
+.rightSection {
+  width: 50%;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 990px) {
+  .rightSection {
+    width: 100%;
+  }
+}
+
+/* .rightSection {
+  width: 100%;
+} */
+
+.rightSectionLg {
+  width: 50%;
+}
+
+/* Map Wrapper */
+/* Map Wrapper */
+.mapWrapper {
+  width: 100%;
+  height: 550px;
+  padding-left: 30px;
+  border: none;
+}
+
+/* Styles for iframes on screens smaller than 500px */
+@media (max-width: 500px) {
+  .mapWrapper:not(#tidio-chat-iframe):not(.hs-form-iframe) {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* Styles for .pp-near-google-map iframe on screens smaller than 990px */
+@media (max-width: 990px) {
+  .mapWrapper {
+    height: 506px;
+    padding-left: 0;
+  }
+}
