@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./EnquirePropertySection.module.css"; // Import the CSS module
+import styles from "./EnquireProperty.module.css"; // Import the CSS module
 
 type EnquirePropertyType = string[];
 
-export default function EnquirePropertySection() {
+const EnquireProperty: React.FC = () => {
   const [EnquirePropertSection, setEnquirePropertSection] =
     useState<EnquirePropertyType>([]);
 
@@ -32,18 +32,17 @@ export default function EnquirePropertySection() {
         </div>
 
         <div className={styles.flexWrapper}>
-          <div className={styles.flexWrapper}>
-            {EnquirePropertSection.map((item, index) => (
-              <a
-                key={index}
-                className={styles.enquireItem} 
-              >
+          {EnquirePropertSection.map((item, index) => (
+            <div className={styles.enquireItem}>
+              <a key={index}  className={styles.Items}>
                 {item}
               </a>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default EnquireProperty;
