@@ -2,23 +2,21 @@
 import React, { useEffect, useState } from "react";
 import styles from "./SimilarProjects.module.css";
 
-type SimilarProject = [string[], string[], string[]];
-
-export default function SimiliarProjectSection() {
-  const [similarProject, setSimilarProject] = useState<SimilarProject | null>(
-    null
-  );
+type SimilarProjectType = [string[], string[], string[]];
+const SimiliarProject: React.FC = () => {
+  const [similarProjectData, setSimilarProjectData] =
+    useState<SimilarProjectType | null>(null);
 
   useEffect(() => {
     const fetchSimilarProjects = async () => {
       const response = await fetch("/api/SimiliarProjectSectionData");
-      const data: SimilarProject = await response.json();
-      setSimilarProject(data);
+      const data: SimilarProjectType = await response.json();
+      setSimilarProjectData(data);
     };
     fetchSimilarProjects();
   }, []);
 
-  if (!similarProject) {
+  if (!similarProjectData) {
     return <div>Loading...</div>;
   }
 
@@ -30,7 +28,7 @@ export default function SimiliarProjectSection() {
         </div>
 
         <div className={styles.projectsGrid}>
-          {similarProject[0].map((imgUrl, index) => (
+          {similarProjectData[0].map((imgUrl, index) => (
             <div className={styles.projectCard} key={index}>
               <div className={styles.cardInner}>
                 <a href="#">
@@ -43,10 +41,10 @@ export default function SimiliarProjectSection() {
                 </a>
                 <div className={styles.cardContent}>
                   <h3 className={styles.projectTitle}>
-                    <a href="#">{similarProject[1][index]}</a>
+                    <a href="#">{similarProjectData[1][index]}</a>
                   </h3>
                   <p className={styles.projectDescription}>
-                    {similarProject[2][index]}
+                    {similarProjectData[2][index]}
                   </p>
                 </div>
               </div>
@@ -56,4 +54,6 @@ export default function SimiliarProjectSection() {
       </div>
     </div>
   );
-}
+};
+
+export default SimiliarProject;

@@ -7,7 +7,7 @@ import Amenities from "../app/components/Amenities/Amenities";
 import NearSection from "../app/components/NearBy/NearBy";
 import PaymentSection from "../app/components/PaymentPlans/PaymentPlans";
 import EnquirePropertySection from "../app/components/EnquireProperty/EnquireProperty";
-import SimiliarProjectSection from "./SimiliarProjectSection";
+import SimiliarProjectSection from "../app/components/SimiliarProject/SimiliarProject";
 
 function SectionFirst() {
   return (
