@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./paymentPlans.module.css"; // Import the CSS module
+import styles from "./PaymentPlans.module.css"; // Import the CSS module
 
 type paymentPlansItem = [string, string];
 type ApiResponse = {
@@ -7,7 +7,7 @@ type ApiResponse = {
   LocationUrl: string;
 };
 
-export default function PaymentPlans() {
+const PaymentPlans: React.FC = () => {
   const [paymentPlans, setPaymentPlans] = useState<paymentPlansItem[]>([]);
   const [locationUrl, setLocationUrl] = useState<string>("");
 
@@ -31,7 +31,7 @@ export default function PaymentPlans() {
 
   return (
     <div
-      className={styles.sectionContainer} // Apply the class from the CSS module
+      className={styles.sectionContainer} 
       style={{
         backgroundImage: `url(${locationUrl})`,
       }}
@@ -46,7 +46,7 @@ export default function PaymentPlans() {
             {paymentPlans.map((item, index) => (
               <li
                 key={index}
-                className={styles.paymentPlanItem} // Apply the class for each item
+                className={styles.paymentPlanItem} 
               >
                 {item}
               </li>
@@ -56,4 +56,7 @@ export default function PaymentPlans() {
       </div>
     </div>
   );
-}
+};
+
+
+export default PaymentPlans ;
