@@ -7,18 +7,25 @@ type ApiResponse = {
   LocationUrl: string;
 };
 
+export const fetchPaymentPlansData = async (): Promise<ApiResponse> => {
+  const response = await fetch("/api/PaymentSectionData");
+  if (!response.ok) {
+    throw new Error("Failed to fetch paymentPlans data");
+  }
+  const data: ApiResponse = await response.json();
+  return data;
+};
+
+
+
 const PaymentPlans: React.FC = () => {
   const [paymentPlans, setPaymentPlans] = useState<paymentPlansItem[]>([]);
   const [locationUrl, setLocationUrl] = useState<string>("");
 
   useEffect(() => {
-    const fetchPaymentPlansData = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch("/api/PaymentSectionData");
-        if (!response.ok) {
-          throw new Error("Failed to fetch paymentPlans data");
-        }
-        const data: ApiResponse = await response.json();
+        const data = await fetchPaymentPlansData();
         setPaymentPlans(data.paymentPlans);
         setLocationUrl(data.LocationUrl);
       } catch (error) {
@@ -26,7 +33,7 @@ const PaymentPlans: React.FC = () => {
       }
     };
 
-    fetchPaymentPlansData();
+    fetchData();
   }, []);
 
   return (

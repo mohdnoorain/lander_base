@@ -33,10 +33,8 @@ const EnquireProperty: React.FC = () => {
 
         <div className={styles.flexWrapper}>
           {EnquirePropertSection.map((item, index) => (
-            <div className={styles.enquireItem}>
-              <a key={index}  className={styles.Items}>
-                {item}
-              </a>
+            <div key={index} className={styles.enquireItem}>
+              <a className={styles.Items}>{item}</a>
             </div>
           ))}
         </div>
