@@ -1,32 +1,36 @@
 /* Section Container Styles */
 .sectionContainer {
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 /* Container */
+
+@media screen and (min-width: 1300px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .container {
+        max-width: 950px;
+    }
+}
+@media screen and (min-width: 767px) {
+    .container {
+        max-width: 730px;
+    }
+}
+@media screen and (min-width: 200px) {
+    .container {
+        max-width: 90%;
+    }
+}
 .container {
-  margin: 0 auto;
-  width: 90%;
+    margin: 0 auto;
 }
 
-@media (min-width: 767px) {
-  .container {
-    width: 730px;
-  }
-}
-
-@media (min-width: 990px) {
-  .container {
-    width: 950px;
-  }
-}
-
-@media (min-width: 1300px) {
-  .container {
-    width: 1280px;
-  }
-}
 
 /* Centered Text */
 .textCenter {
@@ -51,31 +55,25 @@
   margin-top: 36px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  flex-direction: row;
 }
 
-/* Individual Project Card */
+
+
 .projectCard {
-  width: 100%;
+  width: 33.3333%;
   padding: 15px;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 990px) {
   .projectCard {
-    width: 48%;
+    width: 50%;
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .projectCard {
-    width: 40%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .projectCard {
-    width: 28%;
+    width: 100%;
   }
 }
 
@@ -85,19 +83,30 @@
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Image Styles */
+
 .projectImage {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
+@media screen and (max-width: 1200px) {
+  .projectImage {
+    height: 220px;
+  }
+}
+
+.cardContent {
+  padding: 15px 15px;
+}
 
 /* Project Title */
+
 .projectTitle {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 0 15px 0;
   text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0px;
+  margin-bottom: 15px;
 }
 
 /* Project Description */

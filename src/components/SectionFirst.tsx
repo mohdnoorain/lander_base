@@ -1,13 +1,13 @@
 "use client";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import FeatureSection from "../app/components/FeatureSection/FeatureSection";
+// import FeatureSection from "../app/components/FeatureSection/FeatureSection";
 import GallerySection from "../app/section/GallerySection/GallerySection";
 import Amenities from "../app/components/Amenities/Amenities";
 import NearSection from "../app/components/NearBy/NearBy";
-import PaymentSection from "./PaymentSection";
-import EnquirePropertySection from "./EnquirePropertySection";
-import SimiliarProjectSection from "./SimiliarProjectSection";
+import PaymentSection from "../app/components/PaymentPlans/PaymentPlans";
+import EnquirePropertySection from "../app/components/EnquireProperty/EnquireProperty";
+import SimiliarProjectSection from "../app/components/SimiliarProject/SimiliarProject";
 
 function SectionFirst() {
   return (
@@ -15,7 +15,7 @@ function SectionFirst() {
       <NavBar />
       {/* <HeroSection /> */}
       {/* features */}
-      <FeatureSection />
+      {/* <FeatureSection /> */}
       {/* gallery Section  */}
       <GallerySection />
       {/* Amenities */}
