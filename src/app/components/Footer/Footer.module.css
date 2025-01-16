@@ -8,11 +8,11 @@
 
 /* Layout Styles */
 .footerContainer {
-  max-width: 1120px; /* 7xl */
+  max-width: 1280px; /* 7xl */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: flex-start;
   gap: 2.5rem; /* 10px */
@@ -23,6 +23,13 @@
     flex-direction: row;
   }
 }
+@media (max-width: 1280px) {
+  .footerContainer {
+    flex-wrap: wrap;
+  }
+}
+
+
 
 /* Logo Section */
 .logoSection {
@@ -36,7 +43,7 @@
 
 @media (min-width: 768px) {
   .logoSection {
-    text-align: center; /* Left-align on larger screens */
+    text-align: left; /* Left-align on larger screens */
   }
 
   .logo {
@@ -170,7 +177,7 @@
 
 @media (min-width: 768px) {
   .socialIcon {
-    font-size: 2rem; /* 2xl */
+    font-size: 1.5rem; /* 2xl */
   }
 }
 

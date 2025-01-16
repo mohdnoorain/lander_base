@@ -1,6 +1,6 @@
 "use client";
 import NavBar from "./NavBar";
-import Footer from "./Footer";
+import Footer from "../app/components/Footer/Footer";
 // import FeatureSection from "../app/components/FeatureSection/FeatureSection";
 import GallerySection from "../app/section/GallerySection/GallerySection";
 import Amenities from "../app/components/Amenities/Amenities";
