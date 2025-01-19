@@ -6,6 +6,7 @@ import FeatureSection from "./section/FeatureSection/FeatureSection";
 import GallerySection from "./section/GallerySection/GallerySection";
 import NearBySection from "./section/NearBySection/NearBySection";
 import InfoSection from "./section/InfoSection/InfoSection";
+import Footer from "./components/Footer/Footer";
 
 const Gallery = async () => {
   try {
@@ -30,6 +31,7 @@ const DefaultPage: React.FC = () => {
       <GallerySection/>
       <NearBySection/>
       <InfoSection/>
+      <Footer/>
     </div>
   );
 };
