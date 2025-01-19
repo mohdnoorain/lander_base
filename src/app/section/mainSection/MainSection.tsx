@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./MainSection.module.css";
 import SignUpForm from "@/app/components/enquiryForm/enquiryForm";
 import Header from "@/app/components/header/Header";
@@ -11,31 +10,27 @@ interface MainSectionType {
   AddressInfo1: string;
   AddressInfo2: string;
 }
-const MainSection: React.FC = () => {
-  const [MainSectionData, setMainSectionData] = useState<MainSectionType>({
-    imgUrl: "",
-    AddressTitle: "",
-    AddressInfo1: "",
-    AddressInfo2: "",
-  });
 
-  useEffect(() => {
-    const fetchMainSectionData = async () => {
-      try {
-        const response = await fetch("/api/MainSectionData");
-        if (!response.ok) {
-          throw new Error("Failed to fetch hero section data");
-        }
+const fetchMainSectionData = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/api/MainSectionData");
+    if (!response.ok) {
+      throw new Error("Failed to fetch hero section data");
+    }
 
-        const data: MainSectionType = await response.json();
-        setMainSectionData(data);
-      } catch (error) {
-        console.error("Error fetching hero section data:", error);
-      }
-    };
+    const data: MainSectionType = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching hero section data:", error);
+  }
+};
 
-    fetchMainSectionData();
-  }, []);
+const MainSection: React.FC = async () => {
+  const MainSectionData: MainSectionType | undefined = await fetchMainSectionData();
+
+  if (!MainSectionData) {
+    return null;
+  }
 
   return (
     <>

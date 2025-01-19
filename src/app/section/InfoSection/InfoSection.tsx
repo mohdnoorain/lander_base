@@ -5,9 +5,9 @@ import React from "react";
 
 const InfoSection: React.FC = () => {
   return <>
-  <PaymentPlans/>
-  <EnquireProperty/>
-  <SimiliarProject/>
+    <PaymentPlans />
+    <EnquireProperty />
+    <SimiliarProject />
   </>;
 };
 

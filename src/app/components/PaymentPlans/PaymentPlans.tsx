@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import styles from "./PaymentPlans.module.css"; // Import the CSS module
 
@@ -38,7 +39,7 @@ const PaymentPlans: React.FC = () => {
 
   return (
     <div
-      className={styles.sectionContainer} 
+      className={styles.sectionContainer}
       style={{
         backgroundImage: `url(${locationUrl})`,
       }}
@@ -53,7 +54,7 @@ const PaymentPlans: React.FC = () => {
             {paymentPlans.map((item, index) => (
               <li
                 key={index}
-                className={styles.paymentPlanItem} 
+                className={styles.paymentPlanItem}
               >
                 {item}
               </li>
@@ -66,4 +67,4 @@ const PaymentPlans: React.FC = () => {
 };
 
 
-export default PaymentPlans ;
+export default PaymentPlans;
