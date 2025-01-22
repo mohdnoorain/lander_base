@@ -1,30 +1,27 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import styles from "./Features.module.css";
-import FeatureSectionCard from "@/app/components/featureSectionCard/FeatureSectionCard"; // Adjust the import path based on your file structure
+import FeatureSectionCard from "@/app/components/featureSectionCard/FeatureSectionCard";
 
-type FeatureType = [string, string, string][]; // [image, price, location]
+type FeatureType = [string, string, string][];
 
-function FeatureSection() {
-  const [features, setFeatures] = useState<FeatureType | null>(null);
+const fetchFeatureSectionData = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/api/FeatureData");
+    if (!response.ok) {
+      throw new Error("Failed to fetch Feature section data");
+    }
 
-  useEffect(() => {
-    const fetchFeatures = async () => {
-      try {
-        const response = await fetch("/api/FeatureData");
-        if (!response.ok) {
-          throw new Error("Failed to fetch feature data");
-        }
-        const data: FeatureType = await response.json();
-        setFeatures(data);
-      } catch (error) {
-        console.error("Error fetching feature data:", error);
-      }
-    };
+    const data: FeatureType = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching Feature section data:", error);
+  }
+};
 
-    fetchFeatures();
-  }, []);
+const FeatureSection: React.FC = async () => {
+  const features: FeatureType | undefined = await fetchFeatureSectionData();
+  if (!features) {
+    return null;
+  }
 
   return (
     <>
@@ -61,6 +58,6 @@ function FeatureSection() {
       </div>
     </>
   );
-}
+};
 
 export default FeatureSection;

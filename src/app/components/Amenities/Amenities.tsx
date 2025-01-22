@@ -1,9 +1,21 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import styles from "./Amenities.module.css";
 import { IoMdCheckmark } from "react-icons/io";
 
 type AmenitiesType = string[];
+
+const fetchAmenitiesData = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/api/AmenitiesData");
+    if (!response.ok) {
+      throw new Error("Failed to fetch hero section data");
+    }
+
+    const data: AmenitiesType = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching Amenities data:", error);
+  }
+};
 
 const Amenities: React.FC = () => {
   return (
@@ -22,24 +34,12 @@ const Amenities: React.FC = () => {
 
 export default Amenities;
 
-const AmenitiesCard: React.FC = () => {
-  const [Amenities, setAmenities] = useState<AmenitiesType>([]);
+const AmenitiesCard: React.FC = async () => {
+  const Amenities: AmenitiesType | undefined = await fetchAmenitiesData();
+  if (!Amenities) {
+    return null;
+  }
 
-  useEffect(() => {
-    const Gallery = async () => {
-      try {
-        const response = await fetch("/api/AmenitiesData");
-        if (!response.ok) {
-          throw new Error("Failed to fetch feature data");
-        }
-        const data: AmenitiesType = await response.json();
-        setAmenities(data);
-      } catch (error) {
-        console.error("Error fetching feature data:", error);
-      }
-    };
-    Gallery();
-  }, []);
   return (
     <>
       <ul className={styles.flexWrapper}>

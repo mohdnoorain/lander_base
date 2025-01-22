@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import styles from "./PaymentPlans.module.css"; // Import the CSS module
 
 type paymentPlansItem = [string, string];
@@ -8,40 +6,33 @@ type ApiResponse = {
   LocationUrl: string;
 };
 
-export const fetchPaymentPlansData = async (): Promise<ApiResponse> => {
-  const response = await fetch("/api/PaymentSectionData");
-  if (!response.ok) {
-    throw new Error("Failed to fetch paymentPlans data");
+const fetchPaymentPlansData = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost:3000/api/PaymentSectionData"
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch paymentPlans data");
+    }
+    const data: ApiResponse = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching payments plan data");
   }
-  const data: ApiResponse = await response.json();
-  return data;
 };
 
+const PaymentPlans: React.FC = async () => {
 
-
-const PaymentPlans: React.FC = () => {
-  const [paymentPlans, setPaymentPlans] = useState<paymentPlansItem[]>([]);
-  const [locationUrl, setLocationUrl] = useState<string>("");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchPaymentPlansData();
-        setPaymentPlans(data.paymentPlans);
-        setLocationUrl(data.LocationUrl);
-      } catch (error) {
-        console.error("Error fetching paymentPlans data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const data: ApiResponse | undefined = await fetchPaymentPlansData();
+  if (!data) {
+    return null;
+  }
 
   return (
     <div
       className={styles.sectionContainer}
       style={{
-        backgroundImage: `url(${locationUrl})`,
+        backgroundImage: `url(${data.LocationUrl})`,
       }}
     >
       <div className={styles.container}>
@@ -51,11 +42,8 @@ const PaymentPlans: React.FC = () => {
 
         <div className={styles.paymentPlansList}>
           <ul className={styles.flexWrapper}>
-            {paymentPlans.map((item, index) => (
-              <li
-                key={index}
-                className={styles.paymentPlanItem}
-              >
+            {data.paymentPlans.map((item, index) => (
+              <li key={index} className={styles.paymentPlanItem}>
                 {item}
               </li>
             ))}
@@ -65,6 +53,5 @@ const PaymentPlans: React.FC = () => {
     </div>
   );
 };
-
 
 export default PaymentPlans;

@@ -21,7 +21,7 @@ const fetchMainSectionData = async () => {
     const data: MainSectionType = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching hero section data:", error);
+    console.error("Error fetching main section data:", error);
   }
 };
 
