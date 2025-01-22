@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import styles from "./NearBy.module.css";
 
 type NearbyItem = [string, string];
@@ -8,27 +6,26 @@ type ApiResponse = {
   LocationUrl: string;
 };
 
-const NearBy: React.FC = () => {
-  const [nearBy, setNearBy] = useState<NearbyItem[]>([]);
-  const [locationUrl, setLocationUrl] = useState<string>("");
+const fetchNearSectionData = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/api/NearSectionData");
+    if (!response.ok) {
+      throw new Error("Failed to fetch Near section data");
+    }
 
-  useEffect(() => {
-    const fetchNearByData = async () => {
-      try {
-        const response = await fetch("/api/NearSectionData");
-        if (!response.ok) {
-          throw new Error("Failed to fetch nearby data");
-        }
-        const data: ApiResponse = await response.json();
-        setNearBy(data.NearBy);
-        setLocationUrl(data.LocationUrl);
-      } catch (error) {
-        console.error("Error fetching nearby data:", error);
-      }
-    };
+    const data: ApiResponse = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching Near section data:", error);
+  }
+};
 
-    fetchNearByData();
-  }, []);
+const NearBy: React.FC = async () => {
+  const data: ApiResponse | undefined = await fetchNearSectionData();
+
+  if (!data) {
+    return;
+  }
 
   return (
     <div className={styles.sectionContainer}>
@@ -38,7 +35,7 @@ const NearBy: React.FC = () => {
         </div>
         <div className={styles.flexWrap}>
           <div className={styles.leftSection}>
-            {nearBy.map(([time, location], index) => (
+            {data.NearBy.map(([time, location], index) => (
               <div key={index} className={styles.nearByItem}>
                 <div className={styles.itemWrapper}>
                   <div className={styles.timeBox}>
@@ -55,7 +52,7 @@ const NearBy: React.FC = () => {
           <div className={styles.rightSection}>
             <div>
               <iframe
-                src={locationUrl || "about:blank"}
+                src={data.LocationUrl || "about:blank"}
                 width="100%"
                 allowFullScreen
                 className={styles.mapWrapper}

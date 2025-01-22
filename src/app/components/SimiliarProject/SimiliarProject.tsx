@@ -1,23 +1,29 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import styles from "./SimilarProjects.module.css";
 
 type SimilarProjectType = [string[], string[], string[]];
-const SimiliarProject: React.FC = () => {
-  const [similarProjectData, setSimilarProjectData] =
-    useState<SimilarProjectType | null>(null);
 
-  useEffect(() => {
-    const fetchSimilarProjects = async () => {
-      const response = await fetch("/api/SimiliarProjectSectionData");
-      const data: SimilarProjectType = await response.json();
-      setSimilarProjectData(data);
-    };
-    fetchSimilarProjects();
-  }, []);
+const fetchSimiliarProjectSectionData = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost:3000/api/SimiliarProjectSectionData"
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch SimiliarProject Section Data");
+    }
+
+    const data: SimilarProjectType = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching SimiliarProject Section Data:", error);
+  }
+};
+
+const SimiliarProject: React.FC = async () => {
+  const similarProjectData: SimilarProjectType | undefined =
+    await fetchSimiliarProjectSectionData();
 
   if (!similarProjectData) {
-    return <div>Loading...</div>;
+    return null;
   }
 
   return (
