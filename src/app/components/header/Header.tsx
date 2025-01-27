@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { IoMdCall } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
 import styles from "./header.module.css";
 
 const Header: React.FC = () => {

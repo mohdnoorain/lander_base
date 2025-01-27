@@ -27,6 +27,8 @@ enum RES_STATUS {
 enum DB_PATHS {
     Auth = "db/auth.json",
     Header = "db/header.json",
+    MainSection = "db/mainSection.json",
+    Feature = "db/feature.json",
 }
 
 export { RES_STATUS, DB_PATHS };
