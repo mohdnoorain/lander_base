@@ -14,7 +14,9 @@ const Slider: React.FC = () => {
 
   const fetchSlideImages = async () => {
     try {
-      const response = await fetch("/api/GallerSectionData");
+      const response = await fetch(
+        "http://localhost:3000/api/GallerSectionData"
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch gallery data");
       }
