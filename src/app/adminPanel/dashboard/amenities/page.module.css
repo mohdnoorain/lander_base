@@ -1,0 +1,37 @@
+.container {
+  padding: 20px;
+  max-width: 800px;
+  /* margin: 0 auto; */
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 2fr 2fr; /* Creates two equal columns */
+  gap: 10px; /* Spacing between items */
+  padding: 0;
+  list-style-type: none;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.inputField {
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px 20px;
+}

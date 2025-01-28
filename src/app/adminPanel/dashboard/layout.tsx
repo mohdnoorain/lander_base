@@ -1,15 +1,47 @@
 "use client";
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./layout.module.css";
-import { Button, CardContent } from "@mui/material";
+import { Button } from "@mui/material";
 import {
-  CardGiftcardSharp,
+  BrowseGalleryRounded,
+  Checklist,
   Menu,
   MenuBookRounded,
   PaymentRounded,
 } from "@mui/icons-material";
+import { usePathname } from "next/navigation";
+
+const menuItems = [
+  {
+    href: "/adminPanel/dashboard/mainsection",
+    label: "Main Section",
+    icon: <MenuBookRounded />,
+  },
+  {
+    href: "/adminPanel/dashboard/feature",
+    label: "Feature Section",
+    icon: <PaymentRounded />,
+  },
+  {
+    href: "/adminPanel/dashboard/gallerysection",
+    label: "Gallery Section",
+    icon: <BrowseGalleryRounded />,
+  },
+  {
+    href: "/adminPanel/dashboard/amenities",
+    label: "Amenities",
+    icon: <Checklist />,
+  },
+];
 
 export default function DashboardLayout({ children }: any) {
+  const [selectedPath, setSelectedPath] = useState<string>("");
+  const currentPath = usePathname();
+
+  useEffect(() => {
+    setSelectedPath(currentPath);
+  }, [currentPath]);
+
   return (
     <div className={styles.dashboard}>
       <div className={styles.headerContainer}>
@@ -21,22 +53,21 @@ export default function DashboardLayout({ children }: any) {
 
       <div className={styles.mainContainer}>
         <div className={styles.dashboardButtonContainer}>
-          <a
-            href="/adminPanel/dashboard/mainsection"
-            className={styles.linkButton}
-          >
-            <Button className={styles.ButtonMain}>
-              <MenuBookRounded />
-              Main Section
-            </Button>
-          </a>
-
-          <a href="/adminPanel/dashboard/feature" className={styles.linkButton}>
-            <Button className={styles.ButtonMain}>
-              <PaymentRounded />
-              Feature Section
-            </Button>
-          </a>
+          {menuItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              className={`${styles.linkButton} ${
+                selectedPath === item.href ? styles.active : ""
+              }`}
+              onClick={() => setSelectedPath(item.href)}
+            >
+              <Button className={styles.ButtonMain}>
+                {item.icon}
+                {item.label}
+              </Button>
+            </a>
+          ))}
         </div>
 
         <hr className={styles.divider} />

@@ -29,6 +29,8 @@ enum DB_PATHS {
     Header = "db/header.json",
     MainSection = "db/mainSection.json",
     Feature = "db/feature.json",
+    GallerySection = "db/gallerysection.json",
+    AmenitiesData = "db/amenities.json",
 }
 
 export { RES_STATUS, DB_PATHS };
