@@ -42,7 +42,7 @@ const PaymentPlans: React.FC = async () => {
 
         <div className={styles.paymentPlansList}>
           <ul className={styles.flexWrapper}>
-            {data.paymentPlans.map((item, index) => (
+            {data.paymentPlans?.map((item, index) => (
               <li key={index} className={styles.paymentPlanItem}>
                 {item}
               </li>

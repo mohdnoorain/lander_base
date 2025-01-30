@@ -5,9 +5,12 @@ import { Button } from "@mui/material";
 import {
   BrowseGalleryRounded,
   Checklist,
+  Image,
   Menu,
   MenuBookRounded,
+  PaymentOutlined,
   PaymentRounded,
+  PlaceRounded,
 } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
 
@@ -25,12 +28,22 @@ const menuItems = [
   {
     href: "/adminPanel/dashboard/gallerysection",
     label: "Gallery Section",
-    icon: <BrowseGalleryRounded />,
+    icon: <Image />,
   },
   {
     href: "/adminPanel/dashboard/amenities",
     label: "Amenities",
     icon: <Checklist />,
+  },
+  {
+    href: "/adminPanel/dashboard/nearbysection",
+    label: "NearBy Section",
+    icon: <PlaceRounded />,
+  },
+  {
+    href: "/adminPanel/dashboard/paymentsection",
+    label: "Payment Section",
+    icon: <PaymentOutlined />,
   },
 ];
 

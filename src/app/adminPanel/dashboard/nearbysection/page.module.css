@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+.mapContainer {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.map {
+  border: none;
+  border-radius: 8px;
+}
+
+.listContainer {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.inputField {
+  flex: 1;
+}
+
+.addButton,
+.submitButton,
+.editButton {
+  margin-top: 15px;
+}
