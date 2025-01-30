@@ -32,7 +32,9 @@ enum DB_PATHS {
     GallerySection = "db/gallerysection.json",
     AmenitiesData = "db/amenities.json",
     Nearbysection = "db/nearbysection.json",
-    PaymentSection = "db/paymentsection.json"
+    PaymentSection = "db/paymentsection.json",
+    EnquirePropertSection = "db/enquirysection.json",
+    similiarprojectsection = "db/similiarsection.json"
 }
 
 export { RES_STATUS, DB_PATHS };

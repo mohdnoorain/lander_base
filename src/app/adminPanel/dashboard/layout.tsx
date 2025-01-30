@@ -5,9 +5,11 @@ import { Button } from "@mui/material";
 import {
   BrowseGalleryRounded,
   Checklist,
+  Download,
   Image,
   Menu,
   MenuBookRounded,
+  NewspaperTwoTone,
   PaymentOutlined,
   PaymentRounded,
   PlaceRounded,
@@ -44,6 +46,16 @@ const menuItems = [
     href: "/adminPanel/dashboard/paymentsection",
     label: "Payment Section",
     icon: <PaymentOutlined />,
+  },
+  {
+    href: "/adminPanel/dashboard/enquirypropertysection",
+    label: "Enquiry Section",
+    icon: <Download />,
+  },
+  {
+    href: "/adminPanel/dashboard/similiarprojectsection",
+    label: "Similar Section",
+    icon: <NewspaperTwoTone />,
   },
 ];
 
