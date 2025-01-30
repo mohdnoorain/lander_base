@@ -1,0 +1,47 @@
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.list {
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.inputBox {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.textField {
+  flex: 1;
+}
+
+.button {
+  background-color: #1976d2;
+  color: white;
+}
+
+.button:hover {
+  background-color: #1565c0;
+}

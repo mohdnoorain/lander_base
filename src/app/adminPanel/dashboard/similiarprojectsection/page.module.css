@@ -1,0 +1,25 @@
+.container {
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.inputBox {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
