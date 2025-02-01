@@ -24,7 +24,7 @@ const GallerySection = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await fetch("/api/GallerSectionData");
+      const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/GallerSectionData");
       if (!response.ok) throw new Error("Failed to fetch images");
       const data: string[] = await response.json();
       setImages(data);
@@ -40,9 +40,9 @@ const GallerySection = () => {
 
   const updateGallerySection = async (payload: GalleryType) => {
     // console.log(payload);
-    
+
     try {
-      const response = await fetch("/api/GallerSectionData", {
+      const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/GallerSectionData", {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {

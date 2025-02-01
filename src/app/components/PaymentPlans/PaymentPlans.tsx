@@ -9,7 +9,7 @@ type ApiResponse = {
 const fetchPaymentPlansData = async () => {
   try {
     const response = await fetch(
-      "http://localhost:3000/api/PaymentSectionData"
+      process.env.NEXT_PUBLIC_DOMAIN + "/api/PaymentSectionData"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch paymentPlans data");

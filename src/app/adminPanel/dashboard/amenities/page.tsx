@@ -22,7 +22,7 @@ const AmenitiesPage = () => {
   // Fetch amenities data from the backend API
   useEffect(() => {
     const fetchAmenities = async () => {
-      const response = await fetch("/api/AmenitiesData");
+      const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/AmenitiesData");
       if (response.ok) {
         const data: string[] = await response.json();
         setAmenities(data);
@@ -35,7 +35,7 @@ const AmenitiesPage = () => {
 
   const updateAmenities = async (payload: any) => {
     try {
-      const response = await fetch("/api/AmenitiesData", {
+      const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/AmenitiesData", {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {

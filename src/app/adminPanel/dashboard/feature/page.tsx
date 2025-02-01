@@ -17,7 +17,7 @@ const HomePage = () => {
   // Fetch card data from the API
   const fetchCards = async () => {
     try {
-      const response = await fetch("/api/FeatureData");
+      const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/FeatureData");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
@@ -31,7 +31,7 @@ const HomePage = () => {
   // Update the API with the modified cards
   const updateFeatureSection = async (payload: CardData[]) => {
     try {
-      const response = await fetch("/api/FeatureData", {
+      const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/FeatureData", {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {

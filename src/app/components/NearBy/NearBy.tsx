@@ -8,7 +8,7 @@ type ApiResponse = {
 
 const fetchNearSectionData = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/NearSectionData");
+    const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/NearSectionData");
     if (!response.ok) {
       throw new Error("Failed to fetch Near section data");
     }

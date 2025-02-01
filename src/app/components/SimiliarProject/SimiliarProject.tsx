@@ -5,7 +5,7 @@ type SimilarProjectType = [string[], string[], string[]];
 const fetchSimiliarProjectSectionData = async () => {
   try {
     const response = await fetch(
-      "http://localhost:3000/api/SimiliarProjectSectionData"
+      process.env.NEXT_PUBLIC_DOMAIN + "/api/SimiliarProjectSectionData"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch SimiliarProject Section Data");

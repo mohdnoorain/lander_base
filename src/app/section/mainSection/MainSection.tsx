@@ -13,7 +13,7 @@ interface MainSectionType {
 
 const fetchMainSectionData = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/MainSectionData");
+    const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/MainSectionData");
     if (!response.ok) {
       throw new Error("Failed to fetch hero section data");
     }

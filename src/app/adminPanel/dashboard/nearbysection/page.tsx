@@ -20,7 +20,7 @@ const NearbySection = () => {
   // Fetch Nearby Data
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("/api/NearSectionData");
+      const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/NearSectionData");
       const result: ApiResponse = await res.json();
       console.log(result);
       setData(result);
@@ -51,7 +51,7 @@ const NearbySection = () => {
 
   // Submit Updated Data
   const handleSubmit = async () => {
-    const res = await fetch("/api/NearSectionData", {
+    const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/NearSectionData", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -68,7 +68,7 @@ const NearbySection = () => {
 
   return (
     <Container className={styles.container}>
-      
+
 
       {/* Google Map */}
       <Box className={styles.mapContainer}>

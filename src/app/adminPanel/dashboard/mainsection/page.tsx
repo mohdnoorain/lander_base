@@ -23,7 +23,7 @@ const AdminPage = () => {
   // Fetch data from API
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/api/MainSectionData"); // Replace with your API endpoint
+      const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/MainSectionData"); // Replace with your API endpoint
       const result: MainSectionType = await res.json();
       setData(result);
       setFormData(result);
@@ -33,7 +33,7 @@ const AdminPage = () => {
 
   const updateMainSection = async (payload: any) => {
     try {
-      const response = await fetch("/api/MainSectionData", {
+      const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/MainSectionData", {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {

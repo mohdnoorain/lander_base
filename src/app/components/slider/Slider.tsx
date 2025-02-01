@@ -14,8 +14,9 @@ const Slider: React.FC = () => {
 
   const fetchSlideImages = async () => {
     try {
+      console.log(process.env.NEXT_PUBLIC_DOMAIN + "/api/GallerSectionData");
       const response = await fetch(
-        "http://localhost:3000/api/GallerSectionData"
+        process.env.NEXT_PUBLIC_DOMAIN + "/api/GallerSectionData"
       );
       if (!response.ok) {
         throw new Error("Failed to fetch gallery data");
@@ -109,9 +110,8 @@ const Slider: React.FC = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className={`${styles.slide} ${
-                  currentIndex === index ? styles.slideActive : ""
-                }`}
+                className={`${styles.slide} ${currentIndex === index ? styles.slideActive : ""
+                  }`}
               >
                 <img
                   src={image}
@@ -140,9 +140,8 @@ const Slider: React.FC = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`${styles.dot} ${
-                index === currentIndex ? styles.dotActive : ""
-              }`}
+              className={`${styles.dot} ${index === currentIndex ? styles.dotActive : ""
+                }`}
             />
           ))}
         </div>

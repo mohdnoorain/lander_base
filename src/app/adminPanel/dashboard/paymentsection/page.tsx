@@ -40,7 +40,7 @@ const PaymentSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/PaymentSectionData");
+        const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/PaymentSectionData");
         if (!res.ok) throw new Error("Failed to fetch data");
         const result: ApiResponse = await res.json();
         setData(result);
@@ -91,7 +91,7 @@ const PaymentSection = () => {
     }
 
     try {
-      const res = await fetch("/api/PaymentSectionData", {
+      const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/PaymentSectionData", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

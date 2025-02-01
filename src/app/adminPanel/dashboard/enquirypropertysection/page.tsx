@@ -36,7 +36,7 @@ const EnquirySection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/EnquirePropertySectionData");
+        const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/EnquirePropertySectionData");
         if (!res.ok) throw new Error("Failed to fetch data");
         const result: ApiResponse = await res.json();
         setData(result);
@@ -90,7 +90,7 @@ const EnquirySection = () => {
   // Update Data in Backend
   const updateData = async (updatedData: ApiResponse) => {
     try {
-      const res = await fetch("/api/EnquirePropertySectionData", {
+      const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/EnquirePropertySectionData", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedData),

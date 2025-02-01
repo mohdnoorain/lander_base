@@ -31,7 +31,7 @@ const EnquiryForm: React.FC = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch("/api/CountriesNameData");
+        const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/CountriesNameData");
         if (response.ok) {
           const data: string[] = await response.json();
           setCountries(data);
@@ -102,9 +102,8 @@ const EnquiryForm: React.FC = () => {
           type="text"
           name="fullName"
           placeholder="Full Name"
-          className={`${styles.inputField} ${
-            errors.fullName ? styles.error : ""
-          }`}
+          className={`${styles.inputField} ${errors.fullName ? styles.error : ""
+            }`}
           value={formData.fullName}
           onChange={handleChange}
         />
@@ -123,9 +122,8 @@ const EnquiryForm: React.FC = () => {
           type="text"
           name="phoneNumber"
           placeholder="Phone"
-          className={`${styles.inputField} ${
-            errors.phoneNumber ? styles.error : ""
-          }`}
+          className={`${styles.inputField} ${errors.phoneNumber ? styles.error : ""
+            }`}
           value={formData.phoneNumber}
           onChange={handleChange}
         />

@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const LoginApi = async (payload: { [x: string]: number | string }) => {
   try {
-    const response = await fetch("/api/admin/auth/logIn", {
+    const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/admin/auth/logIn", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -70,7 +70,7 @@ const LoginPage = () => {
               type="text"
               id="username"
               name="username"
-              placeholder="email@domain.com"
+              placeholder="email@NEXT_PUBLIC_DOMAIN.com"
               className={styles.input}
               required
             />

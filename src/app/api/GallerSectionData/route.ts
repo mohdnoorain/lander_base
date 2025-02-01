@@ -7,8 +7,7 @@ import { DB_PATHS, RES_STATUS } from '../constants/commonConst';
 type ResponseData = [string];
 
 export function GET(
-    req: NextRequest,
-
+    req: NextRequest
 ) {
     try {
         const fileData = fs.readFileSync(DB_PATHS.GallerySection, "utf-8");
