@@ -3,7 +3,7 @@ const path = require('path');
 
 // Define source and destination paths
 const sourceDir = path.join(process.cwd(), 'src/db');
-const destDir = path.join(process.cwd(), 'db');
+const destDir = path.join(process.cwd(), '.next/db');
 
 // Function to copy folder recursively
 function copyFolderSync(source, destination) {
