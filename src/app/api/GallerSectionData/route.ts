@@ -7,8 +7,8 @@ import { DB_PATHS, RES_STATUS } from '../constants/commonConst';
 type ResponseData = [string];
 
 export function GET(
-    req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
+    req: NextRequest,
+
 ) {
     try {
         const fileData = fs.readFileSync(DB_PATHS.GallerySection, "utf-8");
@@ -31,7 +31,7 @@ export function GET(
     }
 }
 
-export async function POST(request: NextRequest, response: NextResponse) {
+export async function POST(request: NextRequest) {
     try {
         const body = await RequestHelper.parseBody(request);
 

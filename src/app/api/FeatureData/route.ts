@@ -9,32 +9,32 @@ type ResponseData = [string, string, string][];
 
 
 export function GET(
-    req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
+    req: NextRequest,
+
 ) {
     try {
-    
-            const fileData = fs.readFileSync(DB_PATHS.Feature, "utf-8");
-            const Feature = JSON.parse(fileData);
-            return Response.json(Feature);
-    
-        } catch (error: any) {
-    
-            const data = {
-                message: error?.message || "Oops! something went wrong",
-                errorStack: "admin/feature"
-            };
-    
-            return new Response(JSON.stringify(data),
-                {
-                    status: RES_STATUS.badRequest,
-                    headers: { "Content-Type": "application/json" }
-                }
-            );
-        }
+
+        const fileData = fs.readFileSync(DB_PATHS.Feature, "utf-8");
+        const Feature = JSON.parse(fileData);
+        return Response.json(Feature);
+
+    } catch (error: any) {
+
+        const data = {
+            message: error?.message || "Oops! something went wrong",
+            errorStack: "admin/feature"
+        };
+
+        return new Response(JSON.stringify(data),
+            {
+                status: RES_STATUS.badRequest,
+                headers: { "Content-Type": "application/json" }
+            }
+        );
+    }
 }
 
-export async function POST(request: NextRequest, response: NextResponse) {
+export async function POST(request: NextRequest) {
     try {
         const body = await RequestHelper.parseBody(request);
 

@@ -9,7 +9,7 @@ type ApiResponse = {
     LocationUrl: string;
 };
 
-export function GET(req: NextApiRequest, res: NextApiResponse<ApiResponse>) {
+export function GET(req: NextRequest) {
     try {
 
         const fileData = fs.readFileSync(DB_PATHS.PaymentSection, "utf-8");
@@ -34,7 +34,7 @@ export function GET(req: NextApiRequest, res: NextApiResponse<ApiResponse>) {
     }
 }
 
-export async function POST(request: NextRequest, response: NextResponse) {
+export async function POST(request: NextRequest) {
     try {
         const body = await RequestHelper.parseBody(request);
 

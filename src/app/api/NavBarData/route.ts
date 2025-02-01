@@ -1,12 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextRequest } from 'next/server';
 
 type ResponseData = {
     message: string
 }
 
 export function GET(
-    req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
+    req: NextRequest,
+
 ) {
     const nav = [
         "home",

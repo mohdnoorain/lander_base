@@ -3,7 +3,7 @@ import fs from "fs";
 import RequestHelper from "@/app/api/helpers/requestHelper";
 import { DB_PATHS, RES_STATUS } from "@/app/api/constants/commonConst";
 
-export async function PATCH(request: NextRequest, response: NextResponse) {
+export async function PATCH(request: NextRequest) {
     // Handle POST request
     try {
         const body = await RequestHelper.parseBody(request);

@@ -9,8 +9,8 @@ type ResponseData = {
 
 
 export function GET(
-    req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
+    req: NextRequest,
+
 ) {
     try {
 
@@ -34,7 +34,7 @@ export function GET(
     }
 }
 
-export async function POST(request: NextRequest, response: NextResponse) {
+export async function POST(request: NextRequest) {
     try {
 
         const body = await RequestHelper.parseBody(request);
