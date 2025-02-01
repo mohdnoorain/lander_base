@@ -25,16 +25,16 @@ enum RES_STATUS {
 }
 
 enum DB_PATHS {
-    Auth = "db/auth.json",
-    Header = "db/header.json",
-    MainSection = "db/mainSection.json",
-    Feature = "db/feature.json",
-    GallerySection = "db/gallerysection.json",
-    AmenitiesData = "db/amenities.json",
-    Nearbysection = "db/nearbysection.json",
-    PaymentSection = "db/paymentsection.json",
-    EnquirePropertSection = "db/enquirysection.json",
-    similiarprojectsection = "db/similiarsection.json"
+    Auth = "src/db/auth.json",
+    Header = "src/db/header.json",
+    MainSection = "src/db/mainSection.json",
+    Feature = "src/db/feature.json",
+    GallerySection = "src/db/gallerysection.json",
+    AmenitiesData = "src/db/amenities.json",
+    Nearbysection = "src/db/nearbysection.json",
+    PaymentSection = "src/db/paymentsection.json",
+    EnquirePropertSection = "src/db/enquirysection.json",
+    similiarprojectsection = "src/db/similiarsection.json"
 }
 
 export { RES_STATUS, DB_PATHS };
