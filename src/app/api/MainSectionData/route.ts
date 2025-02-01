@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from "fs";
-import { DB_PATHS, RES_STATUS } from '../constants/commonConst';
+import { DB_PATHS, DB_PATHS_FALLBACK, RES_STATUS } from '../constants/commonConst';
 import { NextRequest, NextResponse } from 'next/server';
 import RequestHelper from '../helpers/requestHelper';
 type ResponseData = {
@@ -13,8 +13,9 @@ export function GET(
 
 ) {
     try {
-
-        const fileData = fs.readFileSync(DB_PATHS.MainSection, "utf-8");
+        const path = fs.existsSync(DB_PATHS.MainSection) ? DB_PATHS.MainSection : DB_PATHS_FALLBACK.MainSection;
+        console.log(path);
+        const fileData = fs.readFileSync(path, "utf-8");
         const mainSection = JSON.parse(fileData);
         return Response.json(mainSection);
 

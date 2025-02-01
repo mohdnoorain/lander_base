@@ -29,6 +29,12 @@ const Slider: React.FC = () => {
   };
 
   useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      console.log('This is the production environment');
+    } else {
+      console.log('This is the development environment');
+    }
+
     fetchSlideImages();
   }, []);
 

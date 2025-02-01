@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
                 authData.sessions.push(token);
             }
 
-            fs.writeFileSync("db/auth.json", JSON.stringify(authData, null, 2));
+            fs.writeFileSync(DB_PATHS.Auth, JSON.stringify(authData, null, 2));
 
             const data = { message: "Login success", token };
             return new Response(JSON.stringify(data), {
