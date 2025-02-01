@@ -21,8 +21,10 @@ function copyFolderSync(source, destination) {
         const srcFile = path.join(source, file);
         const destFile = path.join(destination, file);
         if (fs.lstatSync(srcFile).isDirectory()) {
+            console.log(`🟡Copying file "${srcFile}" to "${destFile}"`);
             copyFolderSync(srcFile, destFile); // Recursively copy subdirectories
         } else {
+            console.log(`🟡Copying file "${srcFile}" to "${destFile}"`);
             fs.copyFileSync(srcFile, destFile);
         }
     });

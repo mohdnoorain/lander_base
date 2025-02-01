@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 const DefaultPage: React.FC = () => {
 
+
       return (
             <div className={styles.page}>
                   <MainSection />
