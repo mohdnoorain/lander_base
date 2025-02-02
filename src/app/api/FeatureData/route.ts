@@ -14,9 +14,40 @@ export function GET(
 ) {
     try {
 
-        const fileData = fs.readFileSync(DB_PATHS.Feature, "utf-8");
-        const Feature = JSON.parse(fileData);
-        return Response.json(Feature);
+        // const fileData = fs.readFileSync(DB_PATHS.Feature, "utf-8");
+        // const Feature = JSON.parse(fileData);
+        return Response.json([
+            [
+                "https://unitedestates.com/wp-content/uploads/2022/08/wallet.png",
+                "5,55,000",
+                "Starting Price"
+            ],
+            [
+                "https://unitedestates.com/wp-content/uploads/2022/08/percentage.png",
+                "60/40",
+                "Starting Price"
+            ],
+            [
+                "https://unitedestates.com/wp-content/uploads/2022/08/give.png",
+                "Q4 2023 TO Q1 2024",
+                "Handover"
+            ],
+            [
+                "https://unitedestates.com/wp-content/uploads/2022/08/bed.png",
+                "JUMEIRAH VILLAGE CIRCLE, DUBAI",
+                "Location"
+            ],
+            [
+                "https://unitedestates.com/wp-content/uploads/2022/08/placeholder.png",
+                "JUMEIRAH VILLAGE CIRCLE, DUBAI",
+                "Location"
+            ],
+            [
+                "https://unitedestates.com/wp-content/uploads/2022/08/hook.png",
+                "Binghatti Developers",
+                "Developer"
+            ]
+        ]);
 
     } catch (error: any) {
 

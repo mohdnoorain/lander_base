@@ -12,9 +12,22 @@ export function GET(
 ) {
     try {
 
-        const fileData = fs.readFileSync(DB_PATHS.AmenitiesData, "utf-8");
-        const AmenitiesData = JSON.parse(fileData);
-        return Response.json(AmenitiesData);
+        // const fileData = fs.readFileSync(DB_PATHS.AmenitiesData, "utf-8");
+        // const AmenitiesData = JSON.parse(fileData);
+        return Response.json([
+            "Concierge",
+            "Gym",
+            "Kids Pool",
+            "Park",
+            "Play Area",
+            "Restaurant",
+            "Retail",
+            "Swimming Pool",
+            "Leisure Areas",
+            "Dining Outlets",
+            "Healthcare Center",
+            "Parking"
+        ]);
 
     } catch (error: any) {
 

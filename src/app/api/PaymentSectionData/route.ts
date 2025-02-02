@@ -12,10 +12,16 @@ type ApiResponse = {
 export function GET(req: NextRequest) {
     try {
 
-        const fileData = fs.readFileSync(DB_PATHS.PaymentSection, "utf-8");
-        const PaymentSectionData = JSON.parse(fileData);
-        return Response.json(PaymentSectionData
-
+        // const fileData = fs.readFileSync(DB_PATHS.PaymentSection, "utf-8");
+        // const PaymentSectionData = JSON.parse(fileData);
+        return Response.json({
+            "LocationUrl": "https://unitedestates.com/wp-content/uploads/2022/11/Binghatti-1.2-1024x576.jpg",
+            "paymentPlans": [
+                "60% During Construction",
+                "40% On Handover",
+                "Q4 2023 TO Q1 2024"
+            ]
+        }
         );
 
     } catch (error: any) {

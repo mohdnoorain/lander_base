@@ -13,9 +13,13 @@ export function GET(
 ) {
     try {
 
-        const fileData = fs.readFileSync(DB_PATHS.EnquirePropertSection, "utf-8");
-        const EnquirePropertSection = JSON.parse(fileData);
-        return Response.json(EnquirePropertSection);
+        // const fileData = fs.readFileSync(DB_PATHS.EnquirePropertSection, "utf-8");
+        // const EnquirePropertSection = JSON.parse(fileData);
+        return Response.json([
+            "Download FAQS",
+            "Download Brochure",
+            "Download Floor Plan"
+        ]);
 
     } catch (error: any) {
 

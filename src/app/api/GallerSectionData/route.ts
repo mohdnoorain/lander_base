@@ -10,9 +10,15 @@ export function GET(
     req: NextRequest
 ) {
     try {
-        const fileData = fs.readFileSync(DB_PATHS.GallerySection, "utf-8");
-        const GallerySection = JSON.parse(fileData);
-        return Response.json(GallerySection);
+        // const fileData = fs.readFileSync(DB_PATHS.GallerySection, "utf-8");
+        // const GallerySection = JSON.parse(fileData);
+        return Response.json([
+            "https://unitedestates.com/wp-content/uploads/2022/11/311710769_200494399033739_7424501755099942867_n.jpg",
+            "https://unitedestates.com/wp-content/uploads/2022/11/Binghatti-pool.jpg",
+            "https://unitedestates.com/wp-content/uploads/2022/11/binghatti-2.png",
+            "https://unitedestates.com/wp-content/uploads/2022/11/Binghatti-1..jpg",
+            "https://unitedestates.com/wp-content/uploads/2022/11/Binghatti-dubai-city-view.jpg"
+        ]);
 
     } catch (error: any) {
 
