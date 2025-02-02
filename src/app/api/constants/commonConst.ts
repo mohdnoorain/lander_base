@@ -27,28 +27,28 @@ enum RES_STATUS {
 }
 
 const DB_PATHS = {
-    Auth: path.join(process.cwd(), ".next/db/auth.json"),
-    Header: path.join(process.cwd(), ".next/db/header.json"),
-    MainSection: path.join(process.cwd(), ".next/db/mainSection.json"),
-    Feature: path.join(process.cwd(), ".next/db/feature.json"),
-    GallerySection: path.join(process.cwd(), ".next/db/gallerysection.json"),
-    AmenitiesData: path.join(process.cwd(), ".next/db/amenities.json"),
-    Nearbysection: path.join(process.cwd(), ".next/db/nearbysection.json"),
-    PaymentSection: path.join(process.cwd(), ".next/db/paymentsection.json"),
-    EnquirePropertSection: path.join(process.cwd(), ".next/db/enquirysection.json"),
-    similiarprojectsection: path.join(process.cwd(), ".next/db/similiarsection.json")
+    Auth: path.join(process.cwd(), "db/auth.json"),
+    Header: path.join(process.cwd(), "db/header.json"),
+    MainSection: path.join(process.cwd(), "db/mainSection.json"),
+    Feature: path.join(process.cwd(), "db/feature.json"),
+    GallerySection: path.join(process.cwd(), "db/gallerysection.json"),
+    AmenitiesData: path.join(process.cwd(), "db/amenities.json"),
+    Nearbysection: path.join(process.cwd(), "db/nearbysection.json"),
+    PaymentSection: path.join(process.cwd(), "db/paymentsection.json"),
+    EnquirePropertSection: path.join(process.cwd(), "db/enquirysection.json"),
+    similiarprojectsection: path.join(process.cwd(), "db/similiarsection.json")
 }
 const DB_PATHS_FALLBACK = {
-    Auth: path.join(process.cwd(), "src/db/auth.json"),
-    Header: path.join(process.cwd(), "src/db/header.json"),
-    MainSection: path.join(process.cwd(), "src/db/mainSection.json"),
-    Feature: path.join(process.cwd(), "src/db/feature.json"),
-    GallerySection: path.join(process.cwd(), "src/db/gallerysection.json"),
-    AmenitiesData: path.join(process.cwd(), "src/db/amenities.json"),
-    Nearbysection: path.join(process.cwd(), "src/db/nearbysection.json"),
-    PaymentSection: path.join(process.cwd(), "src/db/paymentsection.json"),
-    EnquirePropertSection: path.join(process.cwd(), "src/db/enquirysection.json"),
-    similiarprojectsection: path.join(process.cwd(), "src/db/similiarsection.json")
+    Auth: path.join(process.cwd(), "public/db/auth.json"),
+    Header: path.join(process.cwd(), "public/db/header.json"),
+    MainSection: path.join(process.cwd(), "public/db/mainSection.json"),
+    Feature: path.join(process.cwd(), "public/db/feature.json"),
+    GallerySection: path.join(process.cwd(), "public/db/gallerysection.json"),
+    AmenitiesData: path.join(process.cwd(), "public/db/amenities.json"),
+    Nearbysection: path.join(process.cwd(), "public/db/nearbysection.json"),
+    PaymentSection: path.join(process.cwd(), "public/db/paymentsection.json"),
+    EnquirePropertSection: path.join(process.cwd(), "public/db/enquirysection.json"),
+    similiarprojectsection: path.join(process.cwd(), "public/db/similiarsection.json")
 }
 
 export { RES_STATUS, DB_PATHS, DB_PATHS_FALLBACK };

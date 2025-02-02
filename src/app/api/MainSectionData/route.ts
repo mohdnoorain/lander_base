@@ -15,14 +15,10 @@ export function GET(
     try {
         // const path = fs.existsSync(DB_PATHS.MainSection) ? DB_PATHS.MainSection : DB_PATHS_FALLBACK.MainSection;
         // console.log(path);
-        // const fileData = fs.readFileSync(path, "utf-8");
-        // const mainSection = JSON.parse(fileData);
-        return Response.json({
-            "imgUrl": "https://unitedestates.com/wp-content/uploads/2022/11/Binghatti-1.2-1024x576.jpg",
-            "AddressTitle": "BINGHATTI CORNER AAAAAAA",
-            "AddressInfo1": "JUMEIRAH VILLAGE CIRCLE, DUBAI",
-            "AddressInfo2": "THE TALLEST AND LARGEST TOWER IN JUMEIRAH CIRCLE"
-        });
+        const fileData = fs.readFileSync(DB_PATHS.MainSection, "utf-8");
+        console.log(DB_PATHS.MainSection);
+        const mainSection = JSON.parse(fileData);
+        return Response.json(mainSection);
 
     } catch (error: any) {
 
