@@ -14,14 +14,15 @@ interface MainSectionType {
 const fetchMainSectionData = async () => {
   try {
     const response = await fetch(process.env.NEXT_PUBLIC_DOMAIN + "/api/MainSectionData");
-    if (!response.ok) {
-      throw new Error("Failed to fetch hero section data");
-    }
+    console.log(response, response.ok);
+    // if (!response.ok) {
+    //   throw new Error("Failed to fetch hero section data");
+    // }
 
     const data: MainSectionType = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching main section data:", error);
+    console.error("Error fetching main section data:" + process.env.NEXT_PUBLIC_DOMAIN, error);
   }
 };
 

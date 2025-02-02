@@ -13,7 +13,7 @@ const fetchFeatureSectionData = async () => {
     const data: FeatureType = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching Feature section data:", error);
+    console.error("Error fetching Feature section data:" + process.env.NEXT_PUBLIC_DOMAIN, error);
   }
 };
 

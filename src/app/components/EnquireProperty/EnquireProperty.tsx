@@ -5,7 +5,7 @@ type EnquirePropertyType = string[];
 const fetchEnquirePropertySectionData = async () => {
   try {
     const response = await fetch(
-      "http://localhost:3000/api/EnquirePropertySectionData"
+      process.env.NEXT_PUBLIC_DOMAIN + "/api/EnquirePropertySectionData"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch Feature section data");
@@ -14,7 +14,7 @@ const fetchEnquirePropertySectionData = async () => {
     const data: EnquirePropertyType = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching Feature section data:", error);
+    console.error("Error fetching Enquiry section data:", error);
   }
 };
 
